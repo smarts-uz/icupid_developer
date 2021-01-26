@@ -1,0 +1,30 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Chat button installation</h1>
+    <p>Now when the presence code is in place we can add chat request buttons. Links / 
+        buttons for new chat can be installed on any page of your website, the most 
+        common areas are user profile page, search result page, online users list, etc. </p>
+        <p>Put the following code to the link/button</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+            javascript:z5messenger.SendInvitation(&#39;targetUserId&#39;);</p>
+          </td>
+      </tr>
+    </table>
+    <p>    Where targetUserId is ID of the user the chat request goes to. Here is an 
+        example of a simple &quot;Chat now&quot; link</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p>&nbsp;&nbsp;&nbsp;&lt;a href=&quot;void(0);&quot; onClick=&quot;z5messenger.SendInvitation('5748');&quot;&gt;Chat now&lt;/a&gt;</p></p>
+          </td>
+      </tr>
+    </table>
+    <p>&quot;Chat now&quot; link should appear only for those users who are currently on the site. 
+        You can use your own &quot;who is online&quot; system or use data sent by Presence Feed. 
+        To learn more refer to &quot;Online Presence Feed&quot; section of the manual.</p>
+   
+

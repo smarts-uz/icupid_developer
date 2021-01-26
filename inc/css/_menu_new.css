@@ -1,0 +1,168 @@
+
+
+/* side bar menu
+---------------------------------------------------------------------------- */
+
+#side_box { margin:0px; padding:0px;}
+#side_box .menu_box_title, .menu_box_title1 {  
+	border: 1px solid #cccccc;  
+	background: #fff; 
+	font-size:15px; 
+	display:block; 
+	padding: 3px 10px 7px 14px; 
+	height:18px; 
+	overflow:hidden; 
+	font-weight:bold; 
+	line-height:39px !important; 
+	min-height: 45px; 
+	border-radius: 5px 5px 0px 0px;
+	border-bottom:none;
+	color:var(--template-color);
+}
+#side_box .menu_box_title{
+    border-right: 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#side_box .menu_box_title span,.menu_box_title1 span { float:right; margin-top:-3px; margin-right:-10px}
+
+#side_box .menu_box_body, .menu_box_body1 { 
+	width: 100%;
+	display:block; 
+	padding: 6px 10px 6px 10px;
+    border-radius: 0px 0px 5px 5px;
+	margin-bottom:8px;  
+	overflow:hidden; 
+	font-size:14px;
+}
+#side_box .menu_box_body{
+    border: 1px solid #C8C8C8;
+    /*border-right: 0px;*/
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#side_box ul.menu_side {	margin: 0;	padding: 5px; list-style: none;  }
+#side_box .menu_side li {	display: block; line-height: 25px;  background: url(../../images/DEFAULT/_icons/16/bullet_go.png) no-repeat; background-position: 0% 50%; }
+#side_box .menu_side li a { margin-left:25px; display: block;text-decoration: none;   font-size:14px; height:30px; }
+#side_box .menu_side .last { border-bottom:0px;}
+#side_box .menu_side span { margin-left:10px; color:#666;}
+#side_box .menu_side li strong { margin-right:10px;}
+#side_box .menu_advertisement { padding:5px; margin-top:10px;}
+.menu_advertisement img { width: 100%;}
+
+/*  sidebar for profile, calendar, groups
+---------------------------------------------------------------------------- */
+
+#Profile_SideBar { font-size:12px; background:#fff;padding-bottom: 15px;margin: 2% 0;padding-top: 15px; }
+#Profile_SideBar p { margin:0px; }
+#Profile_SideBar h1 { font-size:15px;padding:4% 3%; border: 1px solid #ccc; }
+hr{  border: 0;  width: 100%;  height: 0;  border-top: solid 1px #dfdfdf;  background: none;}
+#Profile_SideBar strong { font-weight:bold}
+
+
+/* top menu bar
+---------------------------------------------------------------------------- */
+
+ul.tabs {	margin: 0;		padding: 0px;		list-style: none;  }
+.tabs li {	display: block; 	line-height: 35px;		float: left;}
+.tabs li a {	width:95px; display: block;		text-decoration: none; text-align: center;	 color: #fff; font-size:12px;/* font-weight:bold;*/}
+.sub_menu, .menu {	width: 100%;	margin-left: auto;		margin-right: auto; height:40px; width:900px;}
+#PageHeader .sub_menu {width: 100%;min-height: 52px;background-color: #fff;-moz-box-shadow: 0px 3px 7px #c1c1c3;-webkit-box-shadow: 0px 3px 7px #c1c1c3;-khtml-box-shadow: 0px 3px 7px #c1c1c3;box-shadow: 0px 3px 7px #c1c1c3;margin: 0 0 0 0;}
+.sub_tabs {	margin: 0;padding: 0px 10px;list-style: none; height:35px; float:left; }
+.sub_tabs li {	display: inline-block; 	line-height: 30px;		float: left;	margin:0px;padding: 16px 11px 0 10px;	}
+.sub_menu .first { margin-left:10px;}
+.sub_tabs li a{	color:#3b5d14;text-decoration:none;margin:0;padding:0px;height:23px;line-height:19px;display:block;float:left; }
+.sub_tabs li a span{ padding:0; cursor:pointer; font-size:15px;}
+
+
+.sub_sub_menu {	width: 100%;  margin-top:5px; margin-left:10px; float:left; height:75px;}
+ul.sub_sub_tabs {height: 25px;padding: 1px;list-style: none; border-bottom:1px dotted #C9C9C9; border-top:1px dotted #C9C9C9; overflow:hidden;}
+.sub_sub_tabs li {	display: block; float: left;line-height:25px; font-size:11px; 	}
+.sub_sub_tabs li a {background: transparent url('../../images/DEFAULT/_acc/nav_arrow_top.gif') no-repeat; background-position: 0% 50%;}
+.sub_sub_tabs li a { width:106px; display: block; text-decoration: none; text-align: center; font-weight: bold; color: #666; background-position: 0% 50%; }
+.sub_sub_tabs li .first { background:none; width:65px;}
+.sub_sub_tabs li .active { color: red;}
+.onlinenow { float:left; color:#fff; min-width: 145PX;margin: 8% 0% 0% 0px; width: 100%;}
+.sub_menu .onlinenow a{font-size: 15px;}
+
+/* ajax menu box on the messages page
+---------------------------------------------------------------------------- */
+
+div#update {      position:absolute;      width:250px;      background-color:white;      color: black;      border:1px solid #888;      margin:0px;      padding:0px;}
+div#update ul {     list-style-type:none;      margin:0px;      padding:0px;}
+div#update ul li.selected { background-color: #ffb;}
+div#update ul li {      list-style-type:none;      display:block;      margin:0;      padding:2px;      height:22px;      cursor:pointer;}
+
+
+/*Sidebar*/
+
+.menu_box_body td, #side .menu_box_body td span {
+    font-size: 14px !important;
+    line-height: 18px;
+}
+
+#side .menu_box_body table {
+    border: none;
+    padding: 4px 0 7px 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    float: left;
+}
+
+#side .menu_box_body td a {
+    color: #666;
+    padding: 0;
+    float: left;
+    text-decoration: none;
+}
+
+/* Login Sidebar*/
+#side table.menu_side td {
+    font-weight: bold;
+}
+#side .menu_side input#username, .menu_side input#password {
+    margin: 5% 0;
+    padding: 3%;
+    background: #fff;
+    width: 100%;
+}
+
+#side .menu_box_body .menu_side input[type="checkbox"] { margin: 5% 3% 5% 3%; vertical-align: middle; padding: 0; }
+
+#side .menu_box_body .menu_side td a {
+    text-decoration: underline;
+    /*padding: 14px 8px 0 0px;*/
+}
+
+#side .menu_box_body  p.twitter-li, #side .menu_box_body  p.facebook-li, #side .menu_box_body .google-li {
+    float: left;
+    width: 100%;
+}
+
+.menu_box_body table.menu_side td img {
+    width: 100% !important;
+    height: initial !important;
+}
+.menu_box_body hr {
+    margin: 3%;
+    border: none;
+}
+.menu_box_body a.pLink , ul.profile_menu_right_small li , ul.profile_menu_right_small{
+    color: #666;
+    font-size: 14px;
+}
+@media (max-width: 1040px){
+#side .menu_box_body .menu_side input[type="checkbox"] {
+    margin: 5% 3% 5% 4%;
+    vertical-align: middle;
+    padding: 0;
+}
+}
+@media (max-width: 650px){
+#Profile_SideBar {
+    margin: 3%;
+    width: 94%;
+}
+}

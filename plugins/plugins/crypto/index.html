@@ -1,0 +1,37 @@
+<!-- index.html -->
+
+<!doctype html>
+<html>
+<head>
+    <title>Crypto form validation</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> <!-- load bootstrap via CDN -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!-- load jquery via CDN -->
+    <script src="crypto_valid.js"></script> <!-- load our javascript file -->
+</head>
+<body>
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1>Ethereum (ETH)  Form Validation</h1>
+
+    <!-- OUR FORM -->
+    <form action="process.php" method="POST">
+
+        <!-- NAME -->
+        <div id="name-group" class="form-group">
+            <label for="name">From Address</label>
+            <input type="text" class="form-control" name="name" placeholder="">
+            <!-- errors will go here -->
+        </div>
+   <div id="loading" style="display: none;">loading...</div>
+   
+<div><p id="result"></p></div>
+        <button type="submit" class="btn btn-success" id="submit" >Submit <span class="fa fa-arrow-right"></span></button>
+
+    </form>
+
+ 
+
+</div>
+</body>
+</html>

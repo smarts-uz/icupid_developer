@@ -1,0 +1,266 @@
+<head>
+    <style type="text/css">
+
+.code { font-family:"Courier New", Courier, monospace; }
+        </style>
+</head>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Login Handlers</h1>
+      <p>Handler is the most important element in integration process. As per diagram 
+        represented in &quot;How site authorization works&quot; section handler generates xml 
+        formatted response with all information on the user requesting application. The 
+        archive you downloaded from support area contains sample handler file which can 
+        be found in &quot;Handlers&quot; folder. The HTTP&nbsp; path to the handler we have 
+        specified in the previous step via admin console. Now let&#39;s go back to admin 
+        console and &quot;Integration section&quot;:</p>
+        <p>Here we have 3 available modes to authorize a user:</p>
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Auto Login</b></td>
+          <td bgcolor="#FFFFFF">If enabled, the chat calls authorization handler and if user 
+              is logged in on the main site he/she enters the chat automatically.</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Chat Login</b></td>
+          <td bgcolor="#FFFFFF">Enables/Disables chat authorization. I.e. a user will be 
+              offered to enter his username and password on the chat login screen.</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Guest Mode</b></td>
+          <td bgcolor="#FFFFFF">Indicates if non registered users (guests) can enter the chat.</td>
+        </tr>
+      </table>
+        <p>For each of the modes chat server calls its own handler</p>
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Auto Login</b></td>
+          <td bgcolor="#FFFFFF">
+              yourdomain/chat71/handlers/auto.login.handler.php?uid=2012</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Chat Auth</b></td>
+          <td bgcolor="#FFFFFF">
+              yourdomain/chat71/handlers/chat.login.handler.php?login=David&amp;password=123</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Guest Mode</b></td>
+          <td bgcolor="#FFFFFF">
+              yourdomain/chat71/handlers/guest.login.handler.php?userName=David</td>
+        </tr>
+      </table>
+        <p>Auto Login and Chat Auth modes have identical xml response. It doesn&#39;t matter what scripting language or methods to generate 
+            xml you use the only requirement is the correct xml structure as the one 
+            demonstrated below: </p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+            <div>
+                &lt;login result=&quot;OK&quot;&gt;&nbsp;<br />
+            </div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre"></span>&lt;userData&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;id&gt;2012&lt;/id&gt; </div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;name&gt;&lt;![CDATA[David]]&gt;&lt;/name&gt;
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;gender&gt;0&lt;/gender&gt;
+                <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;location&gt;London, UK&lt;/location&gt;
+                <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;age&gt;22&lt;/age&gt;</div>
+              </div>
+              </div>
+            </div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;photo&gt;&lt;![CDATA[http://yourdomain/photos/2012_big.png]]&gt;&lt;/photo&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;thumbnail&gt;&lt;![CDATA[http://yourdomain/photos/2012_small.png]]&gt;&lt;/thumbnail&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;details&gt;&lt;![CDATA[Hello, I am David]]&gt;&lt;/details&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;level&gt;regular&lt;/level&gt;</div>
+            
+            <div>
+                &nbsp;&nbsp;
+                &lt;profileUrl&gt;http://yourdomain/profile/David&lt;/profileUrl&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre"></span>&lt;/userData&gt;<br />
+                <div>
+                    &lt;friends&gt;&nbsp;&lt;/friends&gt;</div>
+                <div>
+                    &lt;blocks&gt;&nbsp;&lt;/blocks&gt;&nbsp;<br />
+                </div>
+            </div>
+            <div>
+                &lt;/login&gt;</div>
+            <div></div>
+        </td>
+      </tr>
+    </table>
+    <p>The XML result consists of 4 sections <i>auth,user</i>, <i>friends</i> and <i>blocks</i>.</p>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            <span class="mw-headline">&lt;Auth&gt; Section</span></h2>
+        </span></span>
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>&lt;login result=&quot;OK&quot;&gt;</b></td>
+          <td bgcolor="#FFFFFF">Returned if authentication passed successfully prior to user 
+              info xml. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>&lt;login result=&quot;FAIL&quot; 
+              error=&quot;error_authentication_failed&quot;/&gt;&nbsp;
+</b></td>
+          <td bgcolor="#FFFFFF">Returned if authentication failed and corresponding message is 
+              shown to end user. </td>
+        </tr>
+      </table>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <br />
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            &lt;userData&gt; Section</h2>
+        </span></span>
+        <p><User> 
+        This section is required and always should contain data. If requested user has 
+            no photo you just should return default no photo image. Please refer to the 
+            table below for nodes description:</p>
+        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>id</b></td>
+          <td bgcolor="#FFFFFF">Global user identifier used for the communication between chat 
+              system and website. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>name</b></td>
+          <td bgcolor="#FFFFFF">Name of the user displayed at front-end. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>gender</b></td>
+          <td bgcolor="#FFFFFF">Gender of the user displayed at front-end. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>location</b></td>
+          <td bgcolor="#FFFFFF">Location of the user displayed at front-end. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>age</b></td>
+          <td bgcolor="#FFFFFF">Age of the user displayed at front-end. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>photo</b></td>
+          <td bgcolor="#FFFFFF">Url to the user&#39;s main photo file. The recommended image size 
+              is 200x150 pixels</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>thumbnail</b></td>
+          <td bgcolor="#FFFFFF">User&#39;s thumbnail image URL which is shown on tabs to the left. 
+              The recommended image size is 38x38 pixels</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>details</b></td>
+          <td bgcolor="#FFFFFF">Brief user&#39;s introduction.</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>level</b></td>
+          <td bgcolor="#FFFFFF">Applicable with Limitations plugin installed only, otherwise 
+              return &quot;regular&quot;. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>profileUrl</b></td>
+          <td bgcolor="#FFFFFF">It opens new browser window when a user clicks &quot;Full profile&quot; 
+              link in user&#39;s profile.</td>
+        </tr>
+      </table>
+        <p></p>
+          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dcdcdc">
+            <tr>
+              <td bgcolor="#fef3ce"><p>
+                  <img src="img/note.gif" 
+                      width="65" height="23" /></p>
+                  <p>It&#39;s required to return a value for Photo and Thumbnail parameters. If a user 
+                      doesn&#39;t have profile image you should return default &quot;no photo&quot; image. </p>
+              </td>
+            </tr>
+          </table>
+          <p></p>
+          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dcdcdc">
+            <tr>
+              <td bgcolor="#fef3ce"><p>
+                  <img src="img/note.gif" 
+                      width="65" height="23" /></p>
+                  <p>Flash player has strict security policy allowing to load resources from the domain it is being 
+            initially called from only. If you load profile images from the 3 rd party domain place crossdomain.xml file into the root allowing for flash player connections.</p>
+              </td>
+            </tr>
+          </table>
+        <p>&nbsp;</p>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+                        &lt;<span class="mw-headline">Friends&gt; Section</span></h2>
+        </span></span>This section contains id, name and thumbnail  of the current user's friends with corresponding profile 
+        information. See Friends/block list integration section of the manual for more 
+        details.<br />
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            &lt;<span class="mw-headline">Block&gt; Section</span></h2>
+        </span></span>
+        <p><User>
+          This node lists id, name and thumbnail  of the users who are blocked by the current user. See 
+            Friends/block list integration section of the manual for more details.</p>
+        <p>&nbsp;</p>
+    <p>    In current "Basic integration" section we are setting up very static 
+        authentication model without database connections and sophisticated security 
+        mechanism which are covered in-depth in "Advanced integration" section. </p>
+        <p>    Recall &quot;Adding chat to your website&quot; paragraph where we have passed random 
+            UID as &#39;2012&#39; parameter for popup and embedded modes: </p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p>
+            <b>z5chat.uid = &quot;2012&quot;;</b></p>
+        </td>
+      </tr>
+    </table>
+        <p>    The value of this parameter has passed through chat server and 
+            arrived via GET method to handler. </p>
+        <p>    &nbsp;Before moving forward to final step we need to make sure 
+            our handler returns correct xml response. The most common way to verify output 
+            xml is to call handler directly in browser, like this: </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+            http://yourdomain/chat71/handlers/auto.login.handler.php?uid=2012</td>
+      </tr>
+    </table>
+    <p>If you look at source of the page you should see the following: </p>
+        <p>
+            <img alt="" src="img/xml_response_browser.png" /></p>
+        <p>By taking this step we ensure that authentication has passed successfully and 
+            chat server receives correct response. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+          
+   
+

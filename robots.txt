@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /
+User-agent: Googlebot
+Disallow: /newadmin
+Disallow: /plugins
+Disallow: /uploads
+Disallow: /inc
+User-agent: Slurp
+Disallow: /newadmin
+Disallow: /plugins
+Disallow: /uploads
+Disallow: /inc
+User-Agent: msnbot
+Disallow:

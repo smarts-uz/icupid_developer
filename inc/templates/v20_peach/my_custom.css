@@ -1,0 +1,435 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*#side_box div#MenuControlMain {
+    float: left;
+    width: 100%;
+    padding: 1px;
+    border: 1px solid #C8C8C8;
+    border-radius: 5px;
+}
+#MenuControlHead, #MenuControlBot {
+    width: 100%;
+}*/
+/*#MenuControlMain #MenuControlHead, #MenuControlMain #MenuControlBody, #MenuControlMain #MenuControlBot, #MenuControlBody .ListDisplay, #MenuControlBody .ListDisplay_text {
+    background: #fff;
+    color: #666;
+}
+
+#MenuControlHead .user_name, #MenuControlBody .user_status {
+    color: #666;
+}*/
+/*#side_box div#MenuControlBody {
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+}
+#MenuControlMain #MenuControlHead, #MenuControlMain #MenuControlBody, #MenuControlMain #MenuControlBot, #MenuControlBody .ListDisplay, #MenuControlBody .ListDisplay_text {
+    background: #fff;
+    color: #666;
+}
+#MenuControlBody .ListDisplay {
+    border: none;
+}
+.user_status select {
+    border: 1px solid #666 !important;
+}*/
+span.status_text img {
+    background: #666;
+}
+#side_box .ListDisplay #MenuControlList {
+    margin-bottom: 0px;
+}
+/*#MenuControlBody .ListDisplay_text span, #MenuControlList li span {
+    margin-left: 0;
+}*/
+#MenuControlList li, #MenuControlList li a:hover {
+    border: none;
+    background: none;
+    margin: 0;
+}
+/*#MenuControlList li a {
+    color: #666666;
+    font-weight: normal;
+}*/
+#MenuControlBot {
+    padding: 10px 0;
+    float: left;
+    width: 100%;
+    MIN-HEIGHT: 36PX;
+    margin: 0 auto;
+}
+/*#MenuControlHead, #MenuControlBot {
+    background-size: 100% !important;
+    width: 100%;
+}
+#MenuControlBot a {
+    color: #377BBC;
+    margin-left: 10px;
+}*/
+
+/*search page*/
+/*.TopLogin, .TopUpgrade {
+    FLOAT: LEFT;
+    MARGIN: 0 AUTO;
+    BACKGROUND: NONE;
+    WIDTH: 100%;
+}*/
+ /*div#eMeeting {
+    FLOAT: LEFT;
+    WIDTH: 100%;
+    PADDING: 2% 0 0 0; 
+}
+.header.account_tabs ul li a, #eMeeting .account_tabs {
+    background: none !important;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}*/
+/*.header.account_tabs {
+    overflow: inherit;
+}
+.header.account_tabs {
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+    padding: 0;
+}
+.header.account_tabs ul {
+    padding: 0;
+    margin: 0 !important;
+}
+.header.account_tabs ul li:first-child {
+    border-radius: 5px 0 0 0;
+    border-left: 1px solid #ccc;
+}
+*/
+.header.account_tabs li:hover {
+    background-color: #377BBC;
+    border-bottom: 1px solid #ccc;
+    color: #FFF !important;
+}
+/*.header.account_tabs ul li {
+    float: left;
+    text-align: center;
+    padding: 0;
+    margin: 0px;
+    font: bold 15px Arial;
+    color: #666;
+    background-color: #fff;
+    list-style: none;
+    border-right: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    cursor: pointer;
+}
+.header.account_tabs li.selected a, .header.account_tabs li a:hover {
+    color: #fff;
+}*/
+/*.header.account_tabs ul li a, #eMeeting .account_tabs {
+    background: none !important;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}*/
+/*.header.account_tabs ul li a span {
+    background: none;
+    padding: 13px 9px 13px 9px;
+    margin: 0;
+    LEFT: 0;
+    line-height: 20PX;
+}*/
+/*.header.account_tabs ul li.selected {
+    background-color: #377BBC;
+    border-bottom: 1px solid #ccc;
+    color: #FFF;
+
+}
+.header.account_tabs ul li:last-child {
+    border-radius: 0 5px 0 0;
+}
+*/
+/* -- Search
+.workblock div#gallery_search {
+    width: 100% !important;
+    margin: 0 auto;
+    float: left;
+    padding: 0;
+}
+-- End 
+
+-- Search
+.workblock #gallery_search img.img_border {
+    border: 1px solid #C8C8C8;
+    padding: 0;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.workblock .galleryviewleft div, .workblock .galleryviewright div {
+    text-align: left !important;
+    font-size: 14px;
+}
+-- End 
+*/
+.workblock .galleryviewleft div b, .workblock .galleryviewright div b {
+    color: #377BBC;
+    font-weight: normal;
+}
+
+/*
+-- account -- 
+div#eMeetingContentBox #Results, form#MessagesBox table, div#eMeetingContentBox #Bottom, div#eMeetingContentBox #Title, div#eMeetingContentBox #Search {
+    background: #fff !important;
+}
+
+-- End --
+
+-- search --
+.workblock .galleryviewleft, .workblock .galleryviewright {
+    width: 145px !important;
+    background: #fff !important;
+    float: left;
+    min-height: 130px;
+    margin: 0 20px 0 0;
+}
+-- End --*/
+/*
+.workblock .workblockleft, .workblock .workblockright {
+    width: 48%;
+    background: none;
+    border: 2px solid #ccc;
+}
+div#basic_search_nav {
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    padding: 1% 0%;
+    background: #ccc;
+    color: #fff;
+}
+#basic_search_nav .username {
+    margin: 0;
+}
+#basic_search_nav .username font {
+    color: #fff;
+}
+#basic_search .imageframe {
+    margin: 0 auto;
+}
+img.thumb {
+    border: 1px solid #ccc;
+}
+#basic_search .imagedetails {
+    width: 60%;
+    padding: 10px 0 0 0;
+}
+#main_content_wrapper .Details {
+    padding: 2%;
+    font-size: 15px;
+    line-height: 22px;
+    background: #fff;
+}
+#basic_search ul.details .first {
+    color: #377BBC;
+}
+#basic_search ul.details .last {
+    border-top: 1px solid #ccc;
+    padding: 1% 0;
+}*/
+/*
+#eMeetingContentBox .Acc_ListBox.search_display_off {
+    border-bottom: 0;
+}
+
+#searchblock div.Acc_ListBox {
+    min-height: 172px;
+}
+
+.Acc_ListBox a.photo_75 img {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -4px;
+    border: 1px solid #ccc;
+}
+*/
+/*.Acc_ListBox div.Acc_ListBox_right {
+    width: 84%;
+    padding: 4px 0px 5px 0px;
+}*/
+.Acc_ListBox div.Acc_ListBox_right1 {
+    line-height: 27px;
+}
+.Acc_ListBox div.Acc_ListBox_margin5 {
+    margin-top: 0;
+}
+/*#searchblock div.Acc_ListBox {
+    min-height: 172px;
+}*/
+.Acc_ListBox.search_display_on {
+    background: #fff;
+}
+/*.Acc_ListBox_right2 .container {
+    width: 170px;
+    float: left;
+}*/
+.Acc_ListBox div.my_tasklist.dropdown {
+    display: block !important;
+}
+button.btn.btn-primary.dropdown-toggle.dropmenus {
+    width: 160px;
+    background: #fff;
+    border: 1px solid #377BBC;
+    color: #377BBC;
+    PADDING: 0;
+}
+div.my_tasklist span.send_message {
+    border-right: 1px solid #377BBC;
+    float: left;
+    width: 120px;
+    padding: 4%;
+}
+div.my_tasklist .btn .caret {
+    padding: 0px;
+    width: 9px;
+    margin-top: 14px;
+}
+div.my_tasklist ul.dropdown-menu {
+    POSITION: inherit !IMPORTANT;
+    border: 1px solid #377BBC;
+    MARGIN-TOP: 0;
+}
+div.my_tasklist ul.dropdown-menu img {
+    float: left;
+    margin: 2%;
+}
+div.my_tasklist ul.dropdown-menu li {
+    line-height: 24px;
+}
+ul.dropdown-menu br {
+    display: none;
+}
+/*search login*/
+/*
+#side #side_box .menu_box_title {
+    border-bottom: none;
+}
+
+#side_box .menu_box_title, .menu_box_title1 {
+    background: #fff;
+    border-bottom: none;
+    display: block;
+    border: 1px solid #cccccc;
+    font-size: 15px;
+    font-weight: bold;
+    color: #377BBC;
+    padding-left: 14px;
+    border-radius: 5px 5px 0px 0px;
+    line-height: 39px;
+    min-height: 45px;
+}
+
+div#side .menu_box_body {
+    width: 100%;
+    padding: 6px 6px 6px 14px;
+    border-radius: 0px 0px 5px 5px !important;
+}
+
+
+#side .menu_box_body table {
+    border: none !important;
+    padding: 4px 0 7px 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    float: left;
+}
+
+#side table.menu_side td {
+    font-weight: bold;
+}
+*/
+/*#side .menu_box_body td, #side .menu_box_body td span {
+    font-size: 14px !important;
+    line-height: 18px;
+}
+#side .menu_side input#username, .menu_side input#password {
+    margin: 5% 0;
+    padding: 3%;
+    background: #fff;
+    width: 95% !important;
+}*/
+/*ul.form .input, .input {
+    border: 1px solid #cdcdcd;
+    padding: 0.2em;
+    background: #FFFFFF;
+    color: #666666;
+}*/
+  /*.menu_side input.MainBtn, form[name="LoginForm"] .CapBody input.MainBtn, input.MainBtn, input.NormBtn.advandate_btn.submit_games_page {
+    width: 80px;
+   float: left; 
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #377BBC;
+    margin: 0 0;
+    padding: 10px 0;
+    line-height: normal;
+    border: none;
+}
+A.MainBtn, input.MainBtn {
+    color: #fff;
+}
+#side .menu_box_body .menu_side input[type="checkbox"] {
+    margin: 5% 3% 5% 9% !important;
+    vertical-align: middle;
+    padding: 0;
+}*/
+/*.menu_box_body td, #side .menu_box_body td span {
+    font-size: 14px !important;
+    line-height: 18px;
+}
+body #side .menu_box_body .menu_side td a {
+    color: #377BBC;
+    text-decoration: underline;
+    padding: 14px 8px 0 0px;
+}*/
+/*#side .menu_box_body td a {
+    color: #666;
+    padding: 0 8px 0 0px;
+    float: left;
+    text-decoration: none;
+}
+*/
+#side .menu_box_body td a img, #side_box .menu_box_body .profile_menu_right_small li a img {
+  /*  float: left;
+    outline: none;
+     border: 1px solid #cccccc;
+   width: 70px;
+    height: 70px;
+   padding: 0 !important;*/ 
+}
+/*.menu_box_body table.menu_side td img {
+    width: auto !important;
+    height: auto !important;
+}
+*/
+#ProfileHead table{
+	width:100%;
+}
+
+#ProfileUsernameBox{
+	padding: 2%;
+}
+#side.menu_box_body hr {
+    padding: 0 0;
+    margin: 10px 0;
+}

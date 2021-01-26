@@ -1,0 +1,94 @@
+<head>
+</head>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Online Presence Feed</h1>
+        <p>To setup Online users list feed go to admin panel / Presence feed. Here you can 
+            specify presence handler file and periodicity the server will send data to you.</p>
+        <p>
+            <img alt="" src="img/admin_presence.png" /></p>
+        <p>The server sends 2 types of presence feeds. Full users list and delta. Both full 
+            list and delta go to the same handler but you can setup different periodicity 
+            for them.</p>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            <span class="mw-headline">Full Users List</span></h2>
+        </span></span>
+        <p>&nbsp;</p>
+        <p>Full users list contains the list of all currently logged in users in the 
+            following XML format:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">&nbsp;&lt;presenceFull ts=&quot;TIMESTAMP&quot;&gt;
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;id&gt;user1&lt;/id&gt;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;id&gt;user2&lt;/id&gt;</div>
+<div>&lt;/presenceFull&gt;</div></p>
+          </td>
+      </tr>
+    </table>
+    <p>    Where:</p>
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>ts</b></td>
+          <td bgcolor="#FFFFFF">Server time stamp</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>id</b></td>
+          <td bgcolor="#FFFFFF">User Id</td>
+        </tr>
+        </table>
+   
+
+    <p>Upon receiving full online users list we recommend to fully replace previously 
+        received data.</p>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            <span class="mw-headline">Delta</span></h2>
+        </span></span>
+        <p>Delta presence contains the data on current site enter/leave actions. In other 
+            words it contains the information about who has entered / left the chat&nbsp; within 
+            latest time period. The data comes in the following XML format:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">&nbsp;&lt;presenceDelta ts=&quot;TIME_STAMP_HERE&quot;&gt;
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	</span>&lt;e&gt;USER_ID&lt;/e&gt;</div>
+<div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&lt;l&gt;USER_ID&lt;/l&gt;</div>
+<div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&lt;e&gt;USER_ID&lt;/e&gt;</div>
+<div>&lt;/presenceDelta&gt;</div></p>
+          </td>
+      </tr>
+    </table>
+    <p>Where:</p>
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>ts</b></td>
+          <td bgcolor="#FFFFFF">Server time stamp</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>e</b></td>
+          <td bgcolor="#FFFFFF">Chat enter action. ID of the user who has entered the chat.</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>l</b></td>
+          <td bgcolor="#FFFFFF">Chat&nbsp; left action. ID of the user who has left the chat.</td>
+        </tr>
+        </table>
+<p>Please keep in mind that information comes in chronological order. It is possible 
+    that during one minute for a user to leave and enter the site i.e. he/she closes 
+    the browser by default.</p>
+        <p>&nbsp;If you have any problems working with presence feed we recommend 
+            downloading demo site from your support board to see an example of integration 
+            code.</p>   
+
+    
+   
+

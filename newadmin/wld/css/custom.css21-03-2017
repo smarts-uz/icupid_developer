@@ -1,0 +1,459 @@
+/***** WLD Network *****/
+
+
+#dating_rebranded_admin select{
+  width: 180px;
+  padding: 2px;
+  line-height: 28px;
+  height: 28px;
+  background:#FFFFFF;
+}
+#dating_rebranded_admin input[type=text], #dating_rebranded_admin input[type=password]{
+  width: 200px;
+}
+
+#dating_rebranded_admin input[type=button], #dating_rebranded_admin input[type=submit]{
+  width: 150px;
+
+}
+#dating_rebranded_admin{
+    float: left;
+    width: 100%;
+}
+#dating_rebranded_admin #wpfooter{
+    bottom: inherit;
+}
+#dating_rebranded_admin .page {
+  margin-top: 10px;
+  border : 1px solid #ccc;
+  background-color: #FFFFFF;
+  float: left;
+    width: 100%;
+
+}
+#dating_rebranded_admin .page .heading{
+  border-bottom : 1px solid #ccc;
+}
+
+#dating_rebranded_admin .page .content{
+  border-bottom : 0px solid;  
+}
+
+#dating_rebranded_admin .page .heading h2{
+    
+
+
+
+    margin: 5px 13px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#dating_rebranded_admin .page .content h2, #dating_rebranded_admin .box-heading h2{
+  font-size: 1.3em;
+  margin: 1em 0;
+  display: block;
+  font-weight: 600;
+}
+#dating_rebranded_admin .active{
+  background-color: #FFFFFF;
+}
+#dating_rebranded_admin .content .block{
+  float: left;
+  width: 50%; 
+}
+
+#dating_rebranded_admin .content .block-4{
+    float: left;
+    width: 33%; 
+}
+
+#dating_rebranded_admin .box{
+    float: left;
+    width: 96%;
+    padding: 10px 20px;
+}
+#dating_rebranded_admin .box .box-heading{
+  float: left;
+    width: 100%;
+}
+#dating_rebranded_admin .box .box-content{
+  float: left;
+    width: 100%;
+}
+#dating_rebranded_admin .box .box-content .field{
+  float: left;
+    width: 100%;
+    margin: 5px 0px;
+}
+#dating_rebranded_admin .box .box-content .field label{
+  vertical-align: middle;
+    padding: 8px 0px;
+    width: 29%;
+    text-align: right;
+    float: left;
+}
+#dating_rebranded_admin .block-4 .box .box-content .field label{
+    vertical-align: middle;
+    padding: 0px 15px 0px 0px;
+    width: 20%;
+    text-align: right;
+    float: left;
+}
+#dating_rebranded_admin .block-4 .box .box-content .field span {
+    vertical-align: middle;
+    padding: 0px 0px;
+    width: 75%;
+    float: left;
+}
+#dating_rebranded_admin .box .box-content .thumbnail-field label{
+    text-align: left;
+    width: 25%;
+    font-weight: bold;
+}
+#dating_rebranded_admin .box .box-content .field span{
+    float: left;
+    padding: 0px 10px;
+
+}
+#dating_rebranded_admin #TopCommentsBox{
+  padding: 10px;
+    border: 1px dashed #cccccc;
+    background: #EBFFFF;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+#dating_rebranded_admin #TopCommentsBox img{
+    top: 2px;
+    position: relative;
+}
+#dating_rebranded_admin #footer span {
+    display: block;
+    padding: 2em 0;
+    padding-bottom: 1em;
+    color: #101010;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}
+#dating_rebranded_admin .admin-note{
+    width: 100%;
+    float: left;
+}
+#dating_rebranded_admin ul.form label {
+    display: block;
+    text-align: left;
+    padding: 0 10px 10px 0;
+    font-size: 15px;
+    font-family: arial;
+    font-weight: bold;
+}
+#dating_rebranded_admin .widefat thead, .thead {
+    background: #2DB0F2 url('../../inc/images/lay/sub_bg.jpg');
+    color: #ffffff;
+    font-size: 11px;
+}
+#dating_rebranded_admin .widefat thead td{
+    color: #ffffff !important;
+}
+#dating_rebranded_admin .widefat td {
+    padding: 7px 15px 9px 10px;
+    vertical-align: top;
+    font-size: 12px;
+}
+#dating_rebranded_admin .widefat td, .widefat th {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    font-size: 100%;
+    vertical-align: text-top;
+}
+#dating_rebranded_admin .input {
+    border: 2px solid #62ADAE !important;
+    background: #F7F9FB;
+    height: 26px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 25px;
+    color: #666666;
+}
+#dating_rebranded_admin a.MainBtn, #dating_rebranded_admin input.MainBtn {
+    background: url('../images/_buttons/bg-lt-orangegrad.gif') 0px -10px repeat-x;
+    background-color: #fbdc94;
+    color: #4d1200;
+    border: 1px solid #7d4200;
+    width: initial;
+    margin: 1px;
+    padding: 3px 5px;
+    text-decoration :none ;
+}
+#dating_rebranded_admin input.NormBtn, #dating_rebranded_admin a.NormBtn {
+    background: url('../images/_buttons/bg-grygradlarge.gif') 0px 0px repeat-x !important;
+    color: #222;
+    border: 1px solid #7d4200;
+    width: inherit;
+    margin: 1px;
+    padding: 3px 5px
+}
+#dating_rebranded_admin .files .input{
+    width :400px;
+}
+#dating_rebranded_admin ul.form li {
+    margin: 0 0 5px !important;
+    padding: 0 0 .8em !important;
+    clear: left;
+}
+
+/*  eMeetingTabel CSS  */
+
+ #dating_rebranded_admin #eMeetingTableWrapper {
+    width:100%; overflow:auto; min-height:460px; background:#eeeeee;
+}
+#dating_rebranded_admin #eMeetingTable {
+    border-width: 0px;
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: #EA6900;
+    width: 100%;
+    height:100%;
+    clear: both;
+    margin: 0;
+    background:white;
+}
+
+
+
+#dating_rebranded_admin #eMeetingTable td, #dating_rebranded_admin th {
+    padding: 0.5em;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+}
+#dating_rebranded_admin #eMeetingTable th {
+    padding: 1.0em 0em !important;
+}
+#dating_rebranded_admin #eMeetingTable thead, #dating_rebranded_admin tfoot {
+    background-color: #DDD;
+}
+
+#dating_rebranded_admin #eMeetingTable tr {
+    height:37px;
+}
+#dating_rebranded_admin #eMeetingTable tr.rowodd {
+    background-color: #FFF;
+}
+
+#dating_rebranded_admin #eMeetingTable tr.roweven {
+    background-color: #F2F2F2;
+}
+
+#dating_rebranded_admin .tab-report{
+    padding: 7px 14px !important;
+}
+ 
+#dating_rebranded_admin .report-left-sidebar{
+    width: 20%;
+    float: left;
+}
+#dating_rebranded_admin .nav-tab input[type=button]{
+    width: auto;
+}
+
+#dating_rebranded_admin .report-field{
+    float: left;
+    height: 150px;
+    padding: 8px;
+    border-top: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
+    width: 80%;
+    position: relative;
+}
+#dating_rebranded_admin .report-field:last-child{
+    border-bottom: 1px solid #e9e9e9;
+}
+#dating_rebranded_admin .report-field .report-amount{
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+    padding-bottom: 6px;
+    position: absolute;
+    top: 37%;
+}
+}
+#dating_rebranded_admin .report-field .report-label{
+    font-size: 14px;
+}
+
+#dating_rebranded_admin .eMeetingTableBar { 
+
+    border-width: 2px;
+    border-style: solid;
+    border-collapse: collapse;
+    /*border-color: #EA6900;*/
+    border-color: #FFFFFF;
+    width: 100%;
+    clear: both;
+    margin: 0;
+    /*background:#FA8301;*/
+    background:#FFFFFF;
+    padding:3px; margin-bottom:10px;
+}
+#dating_rebranded_admin #eMeetingTable a {
+    text-decoration: none;
+}
+#dating_rebranded_admin #TableAlert { font-weight:bold; color:white;}
+#dating_rebranded_admin .eMeetingTableBar .input {  border:1px solid #DDDDDD; background:#F7F9FB; font-size:13px; height:25px; margin-right:10px; font-weight:bold; font-family: sans-serif; line-height:25px; color:#666666; }
+
+#dating_rebranded_admin #GoBackButton { padding:5px; font-size:16px;}
+#dating_rebranded_admin #TopCommentsBox { padding:10px; border:1px dashed #cccccc; background:#EBFFFF; margin-bottom:15px; line-height:30px;}
+#dating_rebranded_admin #TopCommentsMainBox { background:#fff; float:left; width:100%;}
+/*  EMEETING QUICK COLOUR CHANGES
+-------------------------------------------------------*/
+
+#dating_rebranded_admin .nav-tab { text-decoration: none; color:#333333;padding: 5px 6px; cursor: pointer;}
+
+#dating_rebranded_admin ul.side-navigation li h3 {background: #DBF0D2;}
+
+/*  EMEETING GALLERY
+-------------------------------------------------------*/
+
+#dating_rebranded_admin #gallerycontent {   position:relative;  width:600px;float:left; margin-left:10px;   }
+#dating_rebranded_admin #gallerycontent1 {  position:relative;width:600px; float:left; }
+
+#dating_rebranded_admin .thumb,#dating_rebranded_admin .thumb1 {   position:relative;  float:left; width:180px;    margin:0 5px 7px 0; overflow:hidden; margin-right:16px; height:300px; overflow:hidden;}
+#dating_rebranded_admin .thumb a:link img,#dating_rebranded_admin .thumb a:visited img,#dating_rebranded_admin .thumb1 a:link img, #dating_rebranded_admin .thumb1 a:visited img {    padding:7px;    border:1px solid #BBB;  width:150px;height:113px;  background:white;}
+#dating_rebranded_admin .thumb a:hover img, #dating_rebranded_admin .thumb1 a:hover img {   border:1px solid #000;}
+#dating_rebranded_admin .thumb .themelabel, #dating_rebranded_admin .thumb1 .themelabel {   font-size:12px; margin:5px 0 0 10px;}
+#dating_rebranded_admin .thumb .themelabel a:link, #dating_rebranded_admin .thumb .themelabel a:visited, #dating_rebranded_admin .thumb1 .themelabel a:link, #dating_rebranded_admin .thumb1 .themelabel a:visited {    font-weight:normal; color:#004C88;  text-align:center;}
+.thumb .themelabel a:hover, .thumb1 .themelabel a:hover {   color: #666666;}
+
+/*  EMEETING GALLERY
+-------------------------------------------------------*/
+
+#dating_rebranded_admin .bar_save { background-color: #E5F1F1;padding:3px; font-size:12px;}
+#dating_rebranded_admin .submit input, #dating_rebranded_admin .button-secondary, #dating_rebranded_admin #login form .submit input, #dating_rebranded_admin div.dashboard-widget-submit input, #dating_rebranded_admin #edit-slug-buttons a.save { background-color: #3D90D4;color: #ffffff;border-color: #62ADAE; font-weight:bold;-moz-border-radius-bottomleft: 5px;border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; border-bottom-right-radius: 5px; font-family: sans-serif; }
+#dating_rebranded_admin .htmlarea {  padding:10px; border:2px dashed #cccccc; margin-top:20px;}
+#dating_rebranded_admin .widefat td, .widefat th, .commentlist li { border-bottom-color: #ccc;}
+#dating_rebranded_admin .widefat thead, .thead {    background: #C3E1F9 url('../../inc/images/lay/sub_bg.jpg'); color: #ffffff; font-size:11px;}
+#dating_rebranded_admin .widefat thead a, .thead a{color: #ffffff;}
+#dating_rebranded_admin .widefat {  border-width: 0px;  border-style: solid;    border-collapse: collapse;  border-color:#EA6900;   width: 100%;    clear: both;    margin: 0;  background:white;}
+#dating_rebranded_admin .widefat a {    text-decoration: none;}
+#dating_rebranded_admin .widefat abbr { white-space: nowrap;}
+#dating_rebranded_admin .widefat td, .widefat th {  border-bottom-width: 1px;   border-bottom-style: solid; border-bottom-color: #ccc;  font-size: 100%;    vertical-align: text-top;}
+#dating_rebranded_admin .widefat td {   padding: 7px 15px 9px 10px; vertical-align: top; font-size:12px;}
+#dating_rebranded_admin .widefat th {   padding: 9px 15px 6px 10px; text-align: left;   line-height: 1.3em; font-size:12px;}
+#dating_rebranded_admin .widefat th a { color: #ffffff; }
+#dating_rebranded_admin .widefat th input { margin: 0 0 0 8px;  padding: 0;}
+#dating_rebranded_admin .editbox {  background:#eeeeee; text-align:center; width:70px;}
+#dating_rebranded_admin .widefat .num { text-align: center;}
+ 
+
+/*  EMEETING PAGE NUMBERS
+-------------------------------------------------------*/
+
+#dating_rebranded_admin #PageNums{border: 0px;float:right;background-color: inherit;}
+#dating_rebranded_admin #PageNums a{    display:block;float:left;padding:3px 6px;margin:5px 10px 0 0;text-decoration:none;color:#fff;font-size: 12px;vertical-align: text-top;border:solid 1px #3F9999;background: #3F9999;color: white;font-weight: bold;}
+#dating_rebranded_admin #PageNums a:hover{  color:#47739E;  background-color:#fff;}
+
+
+/*  EMEETING FORM DATA
+-------------------------------------------------------*/
+
+#dating_rebranded_admin ul.form { margin: 0; float: left; width: 100%; margin-bottom:20px;}
+#dating_rebranded_admin ul.form li { margin: 0 0 5px !important; padding: 0 0 .8em !important; clear: left; }
+#dating_rebranded_admin ul.form li p.note { font-size: .9em; margin-left: 210px; color: #666; margin-bottom: 5px; }
+#dating_rebranded_admin ul.form li.buttons { margin-left: 130px !important; }
+#dating_rebranded_admin ul.form li .tip {   font-size: 10px !important;  color: #777; line-height:23px; margin-bottom:10px; display:block; }
+#dating_rebranded_admin .smiles { display:inline; border:5px;}
+#dating_rebranded_admin ul.form li h3 { margin: 0 0 .5em; }
+#dating_rebranded_admin ul.form label { display: block;   text-align: left; padding: 0 10px 10px 0;   font-size: 15px;  font-family: arial;  font-weight: bold;}
+#dating_rebranded_admin ul.form label em { font-sizesi: .9em; margin-right: 5px;}
+#dating_rebranded_admin ul.form label span { font-weight: normal; }
+#dating_rebranded_admin ul.form textarea { width:330px;}
+#dating_rebranded_admin .input {  border:2px solid #62ADAE; background:#F7F9FB; height:26px; font-size:13px; font-weight:bold; font-family: sans-serif; line-height:25px; color:#666666; }
+/* SELECT{  padding: 1px;  border: 1px solid #68902D;  margin: 5px; font-size:13px;} */
+#dating_rebranded_admin .CapTitle {  padding:3px; color: white; height:20px; display:block; font-weight:bold; font-size:12px;line-height:20px; background:#666; /*display:none;*/}
+#dating_rebranded_admin .CapBody {  border:2px solid #efefef; padding:8px; background:white; } 
+#dating_rebranded_admin .goLeft { float:left;line-height:20px;}
+#dating_rebranded_admin .goRight { float:right;}
+#dating_rebranded_admin ul.form .highlight { background-color:#E7FCF8; }
+#dating_rebranded_admin ul.form .highlight input { background-color:white; color:black;}
+#dating_rebranded_admin ul.form .highlight .tip { color: #ADAAAA; }
+
+#dating_rebranded_admin .box_body {  padding:8px; font-size:80%; padding-top:0px; }
+#dating_rebranded_admin .alerts li { color:#333; height:26px; }
+#dating_rebranded_admin .alerts li a { color:#333; font-weight:bold;}
+
+
+/*  EMEETING SEARCH DROP DOWN AJAX
+-------------------------------------------------------*/
+
+#dating_rebranded_admin div#UpdateSearch {      position:absolute;   width:150px; font-size:13px;font-weight:bold;    background-color:#4A96D4;    color: #ffffff;   border:1px solid #888; padding:0px;z-index:100;        }
+#dating_rebranded_admin div#UpdateSearch ul {      list-style-type:none;      margin:0px;      padding:0px;}
+#dating_rebranded_admin div#UpdateSearch ul li.selected { background-color: #ffffff; color:#666666; font-weight:bolder;}
+#dating_rebranded_admin div#UpdateSearch ul li {   list-style-type:none;    display:block;      margin:0;      padding:2px;      height:22px;      cursor:pointer;}
+#dating_rebranded_admin .eMeetingInput{ width: 50px !important; }
+
+#dating_rebranded_admin .btn-gateway{ float: left; width: auto !important; }
+#dating_rebranded_admin .add-gateway{ width: 50%; padding: 0px 40px;}
+
+.wld-success-message{
+	float: left;
+    padding: 10px;
+    width: 100%;
+    color: #FFF;
+    background: #318e30;
+    margin: 10px 0px;
+}
+.wld-success-message span{
+    font-weight: bold;
+}
+.site_page_long_desc{
+    position: absolute;
+    width: 200px;
+    overflow: overlay;
+    height: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+#dating_rebranded_admin .chkbox-site-settings{
+    padding: 8px 12px !important;
+}
+.table-code-img img{
+    width: 100%;
+    max-width: 200px;
+}
+
+#dating_rebranded_admin .div-payment-custoemr-table{
+    width: 100%;
+    padding: 0% 2%;
+}
+#dating_rebranded_admin .div-payment-custoemr-table table{
+    width: 100%;
+}
+#dating_rebranded_admin .div-payment-custoemr-table table tr{}
+#dating_rebranded_admin .div-payment-custoemr-table table tr th{
+    font-weight: bold;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px;
+}
+#dating_rebranded_admin .div-payment-custoemr-table table tr td{
+    border: 0px;
+    text-align: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.payment-type, .customer-name{ text-transform: capitalize; }
+
+.customer-payment-form{
+    float: left;
+    width: 100%;
+    padding: 2% 5% 0% 5%;
+    display: none;
+}
+.payment-amount{
+    padding: 2px 2px 1px 2px;
+    font-size: 12px;
+}

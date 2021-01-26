@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/chat-widget.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/chat-widget.js"></script>
+
+<!--
+	<script type="text/javascript" src="../html_client/json2.min.js"></script>
+    <script type="text/javascript" src="../html_client/templ.min.js"></script>
+    <script type="text/javascript" src="../html_client/templ.modifiers.js"></script>
+    <script type="text/javascript" src="../html_client/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="../html_client/jquery.jsonp-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../html_client/jquery.tinyscrollbar.min.js"></script>
+	<script type="text/javascript" src="../html_client/_.js"></script>
+    <script type="text/javascript" src="../html_client/chat-widget.js"></script>
+-->
+
+    <title>Chat widget</title>
+</head>
+<body>
+
+	<h1>Chat widget example</h1>
+
+	<div class="left-col">
+		<h2>Minichat widget API</h2>
+		<p>
+			<a href="javascript:void(0)" id="chat-create">Create</a>
+			<a href="javascript:void(0)" id="chat-remove">Remove</a>
+		</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at purus sit amet nisl facilisis elementum. Morbi non ipsum eget enim ornare mollis. Aliquam eu libero sem, at pulvinar mi. Vivamus sed odio sit amet magna auctor luctus. Aenean porta ultrices pellentesque. Duis tincidunt sodales velit non sagittis. Phasellus id ipsum sit amet erat bibendum lobortis. Morbi mollis porttitor ultrices. Phasellus congue facilisis enim, nec venenatis ante volutpat sit amet. Proin in orci a lorem consequat semper vitae a purus. Nulla vitae tortor tellus. Cras at risus nibh. Pellentesque ullamcorper, elit sit amet convallis gravida, lorem ipsum pharetra dolor, dapibus vestibulum magna velit a lacus. Integer sit amet dictum erat. Aenean pulvinar purus eu dolor pharetra fringilla.</p>
+		<p>Nullam euismod quam ac ipsum pretium iaculis. Ut eget purus euismod ante vulputate commodo. Donec porta mauris ut neque vulputate porta. Aenean eleifend dictum sollicitudin. Phasellus non turpis at massa auctor lobortis. Phasellus sed lectus in dolor lacinia adipiscing. In hac habitasse platea dictumst. Vestibulum non lobortis purus. Ut sodales leo eu purus tempor sed imperdiet risus elementum. In hac habitasse platea dictumst. Curabitur ultrices odio ut velit tempus interdum. Donec auctor turpis nec mauris hendrerit non auctor neque placerat.</p>
+	</div>
+
+	<div class="right-col">
+		<h2>Embedded chat widget</h2>
+		<div id="chat-container"></div>
+	</div>
+
+	<div class="clr"></div>
+
+	<script type="text/javascript">
+	var appSettings = {
+
+		emotions: {
+			':)': '01',
+			':D': '02',
+			';)': '03',
+			':0': '04',
+			':(': '05',
+			':\\': '06',
+			':|': '07',
+			'0:)': '08',
+			':p': '09',
+			':`0': '10',
+			':8': '11',
+			':[': '12',
+			':S': '13',
+			':E': '14',
+			':b': '15'
+		},
+		emotionsPath: "./img/emotions",
+
+		maxHistoryMessages: 100
+	};
+
+    $(function() {
+		$('#chat-create').click(function() {
+			$('#chat-container').flashcomsChat({
+				host: 'http://d5.flashcoms.com:10823',
+                // roomID: 'room1',
+				onJoinLink: function() {
+					window.open('../chat_embeded.htm');
+				}
+			});
+		})
+		.trigger('click');
+
+		$('#chat-remove').click(function() {
+			$('#chat-container').flashcomsChat('remove');
+		});
+	});
+	</script>
+
+</body>
+</html>

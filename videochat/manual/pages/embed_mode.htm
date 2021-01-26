@@ -1,0 +1,70 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Embedded mode</h1>
+    <p><b>1.</b>To incorporate the chat in an html page you should paste the following html code 
+        at the relevant place of your page:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+<div>&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;script type=&quot;text/javascript&quot;&gt;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>var flashvars = {};</div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>var params = {uid:&quot;2010&quot;, bgColor:0xffffff};</div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>var attributes = {};</div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>swfobject.embedSWF(&quot;http://www.your_domain.com/chat7/swf/preloader.swf?build=7212&quot;,</div>
+<div><span class="Apple-tab-span" style="white-space:pre">			</span>&quot;main_swf&quot;, &quot;765&quot;, &quot;560&quot;, &quot;9.0.124&quot;,</div>
+<div><span class="Apple-tab-span" style="white-space:pre">			</span>flashvars, params, attributes);</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;/script&gt;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&lt;div style=&quot;text-align:center;&quot;&gt;&nbsp;</div>
+<div>&nbsp;</div>
+<div>&lt;div id=&quot;main_swf&quot;&gt;</div>
+<div>&lt;p&gt;&lt;strong&gt;Flashcoms Videochat 7&lt;/strong&gt;&lt;/p&gt;</div>
+<div>&lt;p&gt;You need to install or upgrade Adobe Flash Player.&lt;/p&gt;</div>
+<div>&lt;p&gt;Version 9.0.124 or higher is required.&lt;/p&gt;</div>
+<div>&lt;p&gt;&lt;a href=&quot;http://get.adobe.com/flashplayer/&quot;&gt;Get Adobe Flash player&lt;/a&gt;&lt;/p&gt;</div>
+<div>&lt;/div&gt;</div>
+<div>&nbsp;</div>
+<div>&lt;/div&gt;</div>
+            </p>
+          </td>
+      </tr>
+    </table>
+    <p>    <b>2.</b> Find the following line from the above code and set appropriate 
+        path to <b>preloader.swf</b> file. </p>
+    <p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+            swfobject.embedSWF(&quot;http://www.your_domain.com/chat7/swf/preloader.swf?build=7212&quot;</p>
+          </td>
+      </tr>
+    </table>
+    <p><b>3.</b>Also, you should add the following string to the header section of the html page:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+                        &nbsp;&lt;script language=&quot;JavaScript&quot; src=&quot;http://www.yoursite.com/chat7/js/flashcoms.js&quot;&gt;&lt;/script&gt;
+          </td>
+      </tr>
+    </table>
+    
+   
+
+    <p><b>4.</b>The main parameter we will be using throughout entire integration process is "UID". This a global user identifier used to retrieve profile and authentication data. At this phase of installation we set it to random value of  "2010" to verify that all the steps were performed successfully.</p>
+   
+
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+            var params = {uid:&quot;2012&quot;, bgColor:0xffffff};
+          </td>
+      </tr>
+    </table>
+   
+

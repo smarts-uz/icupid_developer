@@ -1,0 +1,62 @@
+<head>
+</head>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1">
+        M</a>P3 Player Installation</h1>
+      <p><b>1.</b> User SQL dump file to create required database table. The file can be 
+        found inside of installation package - </p>
+         
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+            www/chat7/mp3player/sql/mp3player.my.sql</p>
+          </td>
+      </tr>
+    </table>
+         <p><b>2.</b> Copy everything from &quot;WWW&quot; folder of the downloaded archive in to the folder we 
+             have created in the previous step. File structure will be as follow: </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+            // DB connection
+        
+        </p>
+            <p class="code">
+                define(&quot;DB_HOST&quot;, &quot;localhost&quot;);
+        
+        </p>
+            <p class="code">
+                define(&quot;DB_USER&quot;, &quot;db_user&quot;);
+        
+        </p>
+            <p class="code">
+                define(&quot;DB_PASSWORD&quot;, &quot;db_pass&quot;);
+        
+        </p>
+            <p class="code">
+                define(&quot;DB_NAME&quot;, &quot;mp3player&quot;); </p>
+            <p class="code">
+                define(&quot;DB_PREFIX&quot;, &quot;chat7_&quot;); // do not change</p>
+          </td>
+      </tr>
+    </table>
+    <p><b>3.</b> Set writing permissions 777 for the following folder which is used to 
+        store MP3 files - </p>
+         
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+            www/chat7/mp3player/mp3player/files/mp3</p>
+          </td>
+      </tr>
+    </table>
+        <p><b>4.</b>&nbsp; Enable MP3 player in admin panel (Media player section)</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+    
+    
+   
+

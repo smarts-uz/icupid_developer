@@ -1,0 +1,16 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1">
+        </a>How Site Authorization Works</h1>
+      <p>The diagram below demonstrates calls sequence made during user's authentication: </p>
+    <p> 
+        <img src="img/how_site_authorization_works.png" alt="" width="665" height="200" /></p>
+        <p><b>1.</b> Once  loaded Chat sends a request over TCP to chat server. The request contains UID  parameter to be used for further authentication. </p>
+        <p><b>2.</b> Java  Server makes HTTP call to handler located on web server (your website). </p>
+        <p><b>3.</b> Handler  generates XML formatted response containing all user's profile data and returns  output xml back to java server. </p>
+        <p><b>4. </b>Chat  receives full information about the user. In case authentication fails for the  user and step #3 returns corresponding error, a warning window appears with  notification for the user. </p>
+        <p>In the following sections we will cover each step in more detail. </p>
+    
+   
+

@@ -1,0 +1,76 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Running Debug</h1>
+      <p>Entire login procedure can be virtually divided onto 3 parts: connect to 
+        chat server, request to authentication handler and response from the 
+        handler. Below we will look into each phase in more detail: </p>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            Connecting to Steaming Media Server</h2>
+        </span></span>
+    <p>When flash client load it establishes connection to chat server. At this stage you can receive error #0-3. For error code 
+        description and further instructions see the next section. </p>
+        <p>
+            <img alt="" src="img/error_loader.png" /></p>
+        <p></p>
+        <p></p>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            Request to Authentication Handler</h2>
+        </span></span>
+        <p>HTTP request to the handler is sent right away after successfully established 
+            connection to media server with auto login set to true. With chat authentication 
+            mode activated request to the handler is sent once a user pushes login button. 
+            Debug provides following information: </p>
+        <p>
+            <img alt="" src="img/error_request_to.png" /></p>
+        <p>&nbsp;</p>
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Login type</b></td>
+          <td bgcolor="#FFFFFF">Indicates currently selected login type: Auto Login, Chat 
+              Auth, Guest Login. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Request url</b></td>
+          <td bgcolor="#FFFFFF">Destination URL for the request. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Username</b></td>
+          <td bgcolor="#FFFFFF">Username entered at login screen (Application for Chat Auth 
+              mode only). </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Password</b></td>
+          <td bgcolor="#FFFFFF">Password entered at login screen (Application for Chat Auth 
+              mode only). </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>UID</b></td>
+          <td bgcolor="#FFFFFF">UID received from the embed code (see &quot;Adding Chat to your 
+              website&quot;)</td>
+        </tr>
+        </table>
+        <span class="Apple-style-span" 
+            style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+        <span class="Apple-style-span" 
+            style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">
+        
+        <p></p>
+        <h2 style="color: black; background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; font-weight: normal; margin-top: 0px; margin-right: 0px; margin-bottom: 0.6em; margin-left: 0px; padding-top: 0.5em; padding-bottom: 0.17em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 19px; background-position: initial initial; background-repeat: initial initial;">
+            Response From Authentication Handler</h2>
+        </span></span>
+        <p>Debug catches response from the handler containing profile information for 
+            current user. At this phase you can receive errors #4-10. See the next section 
+            for error codes explanation. </p>
+        <p align="center">
+            <img alt="" src="img/error_response.png" /></p>
+        <p>&nbsp;</p>

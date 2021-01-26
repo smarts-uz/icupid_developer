@@ -1,0 +1,13 @@
+ALTER TABLE `members_privacy` ADD `profileview_friends` VARCHAR( 50 ) NOT NULL AFTER `skype` ,
+ADD `profileview_nonfriend` VARCHAR( 50 ) NOT NULL AFTER `profileview_friends` ;
+
+CREATE TABLE `members_follow` (
+`autoid` INT( 10 ) NOT NULL AUTO_INCREMENT ,
+`follow_friends` ENUM( 'yes', 'no' ) NOT NULL DEFAULT 'no',
+`follow_autoadd` ENUM( 'yes', 'no' ) NOT NULL DEFAULT 'no',
+`allow_approve` ENUM( 'yes', 'no' ) NOT NULL DEFAULT 'no',
+`follow_display` ENUM( 'yes', 'no' ) NOT NULL DEFAULT 'no',
+`uid` INT NOT NULL ,
+PRIMARY KEY ( `autoid` ) ,
+INDEX ( `uid` )
+);

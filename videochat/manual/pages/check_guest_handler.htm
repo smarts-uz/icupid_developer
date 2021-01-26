@@ -1,0 +1,82 @@
+<head>
+    <style type="text/css">
+
+
+.code { font-family:"Courier New", Courier, monospace; }
+        </style>
+</head>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>Guest Handler</h1>
+      <p>This handler is used in non-integrated mode with chat authorization and guest 
+        mode enabled. It checks if the login name is available to be used under guest 
+        mode.</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+              http://yourdomain/chat71/handlers/guest.login.handler.php?userName=David</td>
+      </tr>
+    </table>
+    <p>    <b>Parameters</b>: </p>
+        <p>    userName- username filled in at login screen;</p>
+        <p>    The format of returned xml is almost identical to &quot;Auto Login&quot; and &quot;Chat 
+            Auth&quot; modes except for the value in &lt; level &gt;: </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+            <div>
+                &lt;login result=&quot;OK&quot;&gt;&nbsp;<br />
+            </div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre"></span>&lt;userData&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;id&gt;2012&lt;/id&gt; </div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;name&gt;&lt;![CDATA[David]]&gt;&lt;/name&gt;
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;gender&gt;0&lt;/gender&gt;
+                <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;location&gt;Not specified&lt;/location&gt;<div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;age&gt;Not 
+                        specified&lt;/age&gt;</div>
+                </div>
+              </div>
+            </div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;photo&gt;&lt;![CDATA[http://yourdomain/photos/nophoto_big.png]]&gt;&lt;/photo&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;thumbnail&gt;&lt;![CDATA[http://yourdomain/photos/nophoto_small.png]]&gt;&lt;/thumbnail&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;details&gt;Hello :) I am 
+                David&lt;/details&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>
+                &lt;level&gt;guest&lt;/level&gt;</div>
+            <div>
+                <span class="Apple-tab-span" style="white-space:pre"></span>&lt;/userData&gt;<br />
+                <div>
+                    &lt;friends&gt;&nbsp;&lt;/friends&gt;</div>
+                <div>
+                    &lt;blocks&gt;&nbsp;&lt;/blocks&gt;&nbsp;</div>
+                <br />
+            </div>
+            <div>
+                &lt;/login &gt;</div>
+            <div>
+                &nbsp;</div>
+        </td>
+      </tr>
+    </table>
+   
+
+        <p>
+        </p>
+   
+

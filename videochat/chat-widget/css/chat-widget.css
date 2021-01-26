@@ -1,0 +1,63 @@
+.fchat {
+	border: 2px solid white;
+	box-shadow: 0 2px 13px rgba(0, 0, 0, .25);
+	background: #FFFFFF;
+	border-radius: 3px;
+	width: 300px;
+	font-family: sans-serif;
+}
+
+.fchat-loading {
+	padding: 10px;
+}
+
+.fchat-header {
+	background: #bfcee0;
+	height: 17px;
+	padding: 5px 7px;
+}
+
+.fchat-header-title {
+	font-size: 15px;
+}
+
+.fchat-error {
+	color: #a52a2a;
+	padding: 10px;
+}
+
+.fchat-inner {
+	padding: 5px 7px;
+}
+
+.fchat-scrollbar .msg-author {
+	margin-right: 5px;
+}
+
+.fchat-tools-panel {
+	display: none;
+	background-color: #bfcee0;
+	padding: 4px;
+	text-align: center;
+}
+
+.fchat-tools-panel form {
+	display: inline;
+}
+
+/** Scrollbar styles **/
+.fchat-scrollbar {clear: both; margin: 0;}
+.fchat-scrollbar .viewport {height: 300px; overflow: hidden; position: relative;}
+.fchat-scrollbar .overview {list-style: none; position: absolute; left: 0; top: 0;}
+.fchat-scrollbar .thumb .end,
+.fchat-scrollbar .thumb {background-color: #444444;}
+.fchat-scrollbar .scrollbar {position: relative; float: right; width: 2px;}
+.fchat-scrollbar .track {background-color: #cccccc; height: 100%; width:6px; position: relative; padding: 0 1px;}
+.fchat-scrollbar .thumb {height: 20px; width: 6px; cursor: pointer; overflow: hidden; position: absolute; top: 0;}
+.fchat-scrollbar .thumb .end {overflow: hidden; height: 5px; width: 6px;}
+.fchat-scrollbar .disable {display: none;}
+
+.emotion {
+	vertical-align: top;
+	margin-top: -1px;
+}

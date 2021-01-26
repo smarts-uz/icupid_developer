@@ -1,0 +1,7 @@
+IndexIgnore *
+<FilesMatch "\.(htm|html|css|js|php|xml|txt|csv|exe|php3|php4|rtf|pdf|doc|odt)$">
+deny from all
+</FilesMatch>
+
+ErrorDocument 403 http://www.datingscripts.co.uk
+ErrorDocument 500 http://www.datingscripts.co.uk

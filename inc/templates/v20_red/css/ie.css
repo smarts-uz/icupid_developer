@@ -1,0 +1,97 @@
+.camera_overlayer{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+    zoom: 1;
+}
+
+.box_1:before{
+    background: url("../images/25525525530.png") repeat;
+}
+.box_1:after{
+    border: 1px solid #fff;
+}
+
+.camera_pag ul li{
+    background: #fff;
+}
+
+.owl-controls .owl-pagination .owl-page{
+    background: #fff;
+}
+
+.box_3 .caption{
+    border:  1px solid #fff;
+}
+
+.box_3 .caption_1{
+    border:  1px solid #fff;
+}
+
+.box_3 .caption_2{
+    border:  1px solid #d82132;
+}
+
+.box_3 .caption_2:after {
+    border-color: #d82132 transparent transparent transparent;
+}
+
+.box_3 .caption_1:hover{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33FFFFFF,endColorstr=#33FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33FFFFFF,endColorstr=#33FFFFFF);
+    zoom: 1;
+}
+
+.box_3 .caption:after {
+    border-color: #fff transparent transparent transparent;
+}
+
+a[data-type='lightbox']:hover > img{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+
+.bg_3 {
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FD82132,endColorstr=#7FD82132);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FD82132,endColorstr=#7FD82132);
+    zoom: 1;
+}
+
+.bg_4 {
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+    zoom: 1;
+}
+
+.bg_5 {
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+    zoom: 1;
+}
+
+.bg_7{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B7D82132,endColorstr=#B7D82132);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B7D82132,endColorstr=#B7D82132);
+    zoom: 1;
+}
+
+a[data-type='linkbox']:hover > img{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+
+.sf-menu ul{
+    background:#d82132;
+}
+
+.btn_1.bg_3{
+    filter: none;
+    -ms-filter: none;
+}
+
+#contact-form ._placeholder{
+    padding: 4px 19px 4px;
+}

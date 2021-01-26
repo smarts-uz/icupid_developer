@@ -1,0 +1,100 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Error Codes</h1>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td bgcolor="#e3edf7"><b># 0.</b> </td>
+        </tr>
+        <tr>
+          <td style="padding:5px;"><table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+              <tr>
+                <td width="165" nowrap="nowrap" bgcolor="#FFFFDF"><b>Description</b></td>
+                <td bgcolor="#FFFFFF">Connection  to chat server failed.</td>
+              </tr>
+              <tr>
+                <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Troubleshooting</b></td>
+                <td bgcolor="#FFFFFF">Confirm  the following: <br />
+                  <br />
+1. Chat server is up and running. <br />
+2. Port 8088 is open on the server. <br />
+3. Firewall doesn't block outgoing connections to port 8088 on your local PC. <br />
+4. Chat server is running on the right domain (specified in your license). </td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+      &nbsp;
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#e3edf7">
+            <b># 1.</b> </td>
+      </tr>
+      <tr>
+        <td style="padding:5px;">
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td width="165" nowrap="nowrap" bgcolor="#FFFFDF"><b>Description</b></td>
+          <td bgcolor="#FFFFFF">Chat  server rejects connection. Response from chat server was received however server rejected  connection to the application. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Troubleshooting</b></td>
+          <td bgcolor="#FFFFFF">Make sure that valid domain name is specified in settings/main.properties. Server refuses connection if flash client connects from domain different from specified in main.properties.</td>
+        </tr>
+        </table>
+        </td>
+      </tr>
+    </table>  
+    <br />  
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#e3edf7">
+            <b># 2.</b> </td>
+      </tr>
+      <tr>
+        <td style="padding:5px;">
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td width="165" nowrap="nowrap" bgcolor="#FFFFDF"><b>Description</b></td>
+          <td bgcolor="#FFFFFF">Connection  to media server failed.</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Troubleshooting</b></td>
+          <td bgcolor="#FFFFFF"><p>Confirm  the following: <br />
+              <br />
+            1. Media server is up and running. <br />
+            2. Port 1935 is open on the server. <br />
+            3. Firewall doesn't block outgoing connections to port 1935 on your local PC. <br />
+			4. Media server is running on the right domain (specified in the settings in admin panel).
+			</p></td>
+        </tr>
+        </table>
+        </td>
+      </tr>
+    </table>  
+    <br />
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#e3edf7">
+            <b># 3.</b> </td>
+      </tr>
+      <tr>
+        <td style="padding:5px;">
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td width="165" nowrap="nowrap" bgcolor="#FFFFDF"><b>Description</b></td>
+          <td bgcolor="#FFFFFF">Media  server rejects connection.</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>Troubleshooting</b></td>
+          <td bgcolor="#FFFFFF"><p>Confirm the following: <br /> 
+            <br />
+              For <strong>FMS</strong>: file FMS_root/applications/chat71/main.asc has ACCEPT_DOMAINS variable that contains URL of your web-site. <br />
+              For <strong>Red5</strong>: file red5_root/webapps/chat71/WEB-INF/red5-web.properties has variable webapp.acceptDomains that contains URL of your web-site. <br />
+              For <strong>Wowza</strong>: file Wowza_root/conf/chat71/Application.xml has property ACCEPT_DOMAINS and it's value is URL of your web-site.</p></td>
+        </tr>
+        </table>
+        </td>
+      </tr>
+    </table>  

@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+@media(max-width:767px){
+	#loginbox{
+		text-align:center;	
+	}
+	#logobox img{
+		margin:auto;
+		}
+	#main-profile-pic img, #main-profile-video img{
+		margin:auto;
+		}
+		#listhometop, .sm-nomargin-to { margin-top:0px;}
+		#compare-tab {display:none;}
+		#compare {display:none;}
+		.nav-tabs > li > a { font-size:12px;}
+		.nav > li > a { padding:10px 5px;}
+		 .showme { display:none; }
+	.logo-inner-dn { display:none !important;}
+	.margin-top-10-xs { margin-top:10px;}	
+.text-align-left-xs { text-align:left;}
+#upgradebutton { text-align:center;}
+
+}
+
+@media(min-width:768px){
+		#loginbox{
+		
+	}
+
+	.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  0
+  padding: 3px 0;
+  font-size: 16px;
+  
+  border-radius: 15px;
+  
+}
+.nav > li > a { padding:10px 10px;}
+
+
+	
+}
+
+@media(min-width:992px){
+	#loginbox{
+		
+	}
+
+.btn-circle-resp {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  padding: 4px 0;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 13px;
+  color: #519EFD;
+  background-color: none;
+  border-color: #519EFD;
+}
+
+}
+
+@media(min-width:1200px){
+	#loginbox{
+		
+	}
+
+.panel-mobile-answer { display:none;}
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+   .collapse {
+       display: none !important;
+   }
+}

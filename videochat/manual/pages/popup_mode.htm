@@ -1,0 +1,140 @@
+<head>
+    <style type="text/css">
+        .style1
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Popup/Fullscreen/Embeded Mode</h1>
+      <p>First of all, you should decide how you want the chat to appear on your web site 
+        - in a popup window or as a part of the page. We recommend using popup mode; 
+        however it is your choice.</p>
+        <h1><a name="10" id="10"></a>Popup Mode</h1>
+        <p>To make the video chat open in a popup window when a user clicks a site link, you 
+            should first initialize several parameters: </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><span class="Apple-style-span"><p>&lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp; z5chat.uid = &quot;2012&quot;;<br />
+&nbsp;&nbsp;&nbsp; z5chat.roomID = 'room2';<br />
+&nbsp;&nbsp;&nbsp; z5chat.logoURL = 'http://youdomain/logo.png';<br />
+&nbsp;&nbsp;&nbsp; z5chat.preloaderBgColor = 0xff0000;<br />
+&nbsp;&nbsp;&nbsp; z5chat.bgColor = 0x0000ff;<br />
+&nbsp;&nbsp;&nbsp; z5chat.langID = 'en_US';<br />
+&lt;/script&gt;<br />
+&nbsp;</p></span></p>
+        </td>
+      </tr>
+    </table>
+    <p>Then append javascript function <b>z5chat.OpenPopup();</b> to link / button: </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+                        <span class="Apple-style-span">&lt;a href=&quot;javascript:z5chat.OpenPopup();&quot;&gt;Open Chat&lt;/a&gt;</span></p>
+        </td>
+      </tr>
+    </table>
+        <h1>Fullscreen Mode</h1>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><span class="Apple-style-span"><p>&lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp; z5chat.uid = &quot;2012&quot;;<br />
+&nbsp;&nbsp;&nbsp; z5chat.roomID = 'room2';<br />
+&lt;/script&gt;</p></span></p>
+        </td>
+      </tr>
+    </table>
+    <p>Then append javascript function <b>z5chat.OpenFullscreen();</b> to link / button: </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+                        <span class="Apple-style-span">&lt;a href=&quot;javascript:z5chat.OpenFullscreen();&quot;&gt;Open 
+                        Full Screen Chat&lt;/a&gt;</span></p>
+        </td>
+      </tr>
+    </table>
+        <h1>Embedded Mode</h1>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><span class="Apple-style-span"><p>&lt;script type=&quot;text/javascript&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp; z5chat.uid = &quot;2012&quot;;<br />
+&nbsp;&nbsp;&nbsp; z5chat.roomID = 'room2';<br />
+&nbsp;&nbsp;&nbsp; z5chat.logoURL = 'http://youdomain/logo.png';<br />
+&nbsp;&nbsp;&nbsp; z5chat.preloaderBgColor = 0xff0000;<br />
+&nbsp;&nbsp;&nbsp; z5chat.bgColor = 0x00ff00;<br />
+&nbsp;&nbsp;&nbsp; z5chat.langID = 'en_US';<br />
+&nbsp;&nbsp;&nbsp; z5chat.ShowChat();<br />
+&lt;/script&gt;</p></span></p>
+        </td>
+      </tr>
+    </table>
+        <p>    Also, you should add the following string to the header section of the html 
+            page:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;">
+                        &nbsp;&lt;script language=&quot;JavaScript&quot; src=&quot;http://yourdomain/chat71/js/flashcoms.js&quot;&gt;&lt;/script&gt;</div></p>        </td>
+      </tr>
+    </table>
+    <p>Where:</p>
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF" class="style1">z5chat.uid</td>
+          <td bgcolor="#FFFFFF">
+              Unique user identifier used for authentication.</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF" class="style1">z5chat.roomID</td>
+          <td bgcolor="#FFFFFF">
+              Optional. If specified a user gets forwarded to selected room automatically. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF" class="style1">z5chat.logoURL</td>
+          <td bgcolor="#FFFFFF">
+              Your custom logo shown on pre-loader screen. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF" class="style1">z5chat.preloaderBgColor</td>
+          <td bgcolor="#FFFFFF">
+              Controls main background color for pre-loader. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF" class="style1">z5chat.bgColor</td>
+          <td bgcolor="#FFFFFF">
+              Controls main background color for chat interface. </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF" class="style1">z5chat.langID</td>
+          <td bgcolor="#FFFFFF">
+              Indicates default language. IDs can be found in admin panel -&gt; Language section.</td>
+        </tr>
+      </table>
+        <p></p>
+          <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dcdcdc">
+            <tr>
+              <td bgcolor="#fef3ce"><p>
+                  <img src="img/note.gif" 
+                      width="65" height="23" /></p>
+                  <p>The main parameter we will be using throughout entire integration process is 
+                      &quot;UID&quot;. This a global user identifier used to retrieve profile and authentication 
+                      data. At this phase of installation we set it to random value of &quot;2012&quot; to 
+                      verify that all the steps were performed successfully.</p>
+              </td>
+            </tr>
+          </table>
+          
+        
+    
+   
+

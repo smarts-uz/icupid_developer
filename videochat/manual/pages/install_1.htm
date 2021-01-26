@@ -1,0 +1,74 @@
+<head>
+</head>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Installation</h1>
+    <p><b>1.</b> Copy entire "messenger7" folder into Flash Media Server application directory. 
+        Windows default location:</p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p>c:\Program 
+            Files\Macromedia\Flash Media Server 2\applications\ </p>
+          </td>
+      </tr>
+    </table>
+    <p>For Wowza and Red5 users media server requires reboot after upload. </p>
+    <p><b>2.</b> Copy everything from "WWW" directory to any pre-created folder on your 
+        website. For our sample installation we are copying files into "messenger_7". </p>
+    <p><b>3.</b> Open "im.js" file which can be found in "js" folder with any text 
+        editor like notepad and find the following string:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">var root = 
+            &#39;http://yourdomain/messenger_7/&#39;;</p>
+          </td>
+      </tr>
+    </table>
+    <p>Specify full HTTP path to the pre-created folder we used to upload files. </p>
+    <p><b>4.</b> Try to reach&nbsp; messenger.htm page in the browsers to make sure files locate in 
+        the correct folder: </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+            http://yourdomain/messenger_7/messenger.htm</p>
+          </td>
+      </tr>
+    </table>
+    <p>You should see a page with embedded messenger. It won&#39;t load this time as we need 
+        to pass on several parameters (explained further)</p>
+    <p><b>5.</b> Add the following string to header section of the html page. The most 
+        common practice is to have this reference added to global website template. </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">&lt;script    language=&quot;JavaScript&quot; src=&quot;http://yourdomain/messenger_7/js/im.js&quot;&gt;<br />
+          &lt;/script&gt;</p>
+          </td>
+      </tr>
+    </table>
+    
+       <p><b>6.</b> Now we need to add presence code responsible for user's authentication 
+           and online status update. Online presence code should be set globally throughout 
+           entire website. The most common practice is to have presence code embedded into 
+           global template:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p>&nbsp;&lt;div style=&quot;width:1px;height:1px&quot;&gt;&nbsp;</p>
+            <div>&nbsp;&nbsp; &nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;script type=&quot;text/javascript&quot;&gt;&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>try {<span class="Apple-tab-span" style="white-space:pre">		</span></div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>z5messenger.uid = '2010';<span class="Apple-tab-span" style="white-space:pre">	</span></div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span></div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>z5messenger.StartPresence();</div>
+<div>&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>} catch(err) {}</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;/script&gt;&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;/div&gt;&nbsp;</div></p>
+          </td>
+      </tr>
+    </table>
+    <p>The main parameter we will be using throughout entire integration process is "UID". This a global user identifier used to retrieve profile and authentication data. At this phase of installation we set it to random value of  "2010" to verify that all the steps were performed successfully.</p>
+   
+

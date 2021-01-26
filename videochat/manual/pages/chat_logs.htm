@@ -1,0 +1,74 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1">
+        C</a>hat Logs</h1>
+      <p>You can retrieve all chat conversations by enabling chat logs option in admin 
+        panel. To do that go to Admin panel/Logs, enable chat logs option, select how 
+        often you want to receive logs and specify handler URL</p>
+        <p>
+            <img alt="" src="img/admin_logs.png" /></p>
+    <p>If enabled chat logs will be sent to your server in the following XML format:</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p>&nbsp;&lt;chatLogs ts=&quot;TIMESTEMPHERE&quot;&gt;</p>
+<div>&nbsp;</div>
+<div>&nbsp;&nbsp;&lt;m&gt;</div>
+<div>&nbsp;&nbsp; &nbsp;&lt;r&gt;room1&lt;/r&gt;</div>
+<div>&nbsp;&nbsp; &nbsp;&lt;f&gt;29&lt;/f&gt;</div>
+<div>&nbsp;&nbsp; &nbsp;&lt;to&gt;72&lt;/to&gt;</div>
+<div>&nbsp;&nbsp; &nbsp;&lt;w&gt;true&lt;/w&gt;</div>
+<div>&nbsp;&nbsp; &nbsp;&lt;dt&gt;1247580882330&lt;/dt&gt;</div>
+<div>&nbsp;&nbsp; &nbsp;&lt;c&gt; Hi marc&lt;/c&gt;</div>
+<div>&nbsp;&nbsp;&lt;/m&gt;</div>
+<div>&nbsp;</div>
+<div>&nbsp;&nbsp;...</div>
+<div>&lt;/chatLogs&gt;</div></p>
+          </td>
+      </tr>
+    </table>
+    <p>    Where:</p>
+      <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>ts</b></td>
+          <td bgcolor="#FFFFFF">server time stamp</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>m</b></td>
+          <td bgcolor="#FFFFFF">message node</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>r</b></td>
+          <td bgcolor="#FFFFFF">room ID </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>f</b></td>
+          <td bgcolor="#FFFFFF">from user id</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>to</b></td>
+          <td bgcolor="#FFFFFF">to user id</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>w</b></td>
+          <td bgcolor="#FFFFFF">is whisper or not (true,false)</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>dt</b></td>
+          <td bgcolor="#FFFFFF">message sent time stamp</td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap" bgcolor="#FFFFDF"><b>c</b></td>
+          <td bgcolor="#FFFFFF">message content</td>
+        </tr>
+        </table>
+   
+
+        <p>&nbsp;
+            </p>
+            </p>
+        
+
+   
+

@@ -1,0 +1,54 @@
+<head>
+    <style type="text/css">
+
+
+.code { font-family:"Courier New", Courier, monospace; }
+        </style>
+</head>
+
+<table width="649" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="649" height="500" style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"> F</a>riends / Block List Integration</h1>
+        <p>Chat can be configured to import existing friends/block list from the website it 
+          integrates into. Refer to &quot;<b>Basic integration&quot; -&gt; &quot;Login handlers</b>&quot; 
+          where we left 2 nodes empty &lt; friends &gt; and &lt; blocks &gt;. Now we need to populate 
+          those nodes with data. Below is the full profile xml for authorized user: </p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="400" bgcolor="#ffffdf" style="padding:7px;"><div> &lt;login result=&quot;OK&quot;&gt;&nbsp;<br />
+              </div>
+                <div> <span class="Apple-tab-span" style="white-space:pre"></span>&lt;userData&gt;</div>
+              <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;id&gt;2012&lt;/id&gt; </div>
+              <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span> &lt;name&gt;&lt;![CDATA[David]]&gt;&lt;/name&gt;
+                    <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;gender&gt;0&lt;/gender&gt;
+                        <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span> &lt;location&gt;London, UK&lt;/location&gt;
+                            <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;age&gt;22&lt;/age&gt;</div>
+                        </div>
+                    </div>
+              </div>
+              <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span> &lt;photo&gt;&lt;![CDATA[http://yourdomain/photos/david_big.png]]&gt;&lt;/photo&gt;</div>
+              <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span> &lt;thumbnail&gt;&lt;![CDATA[http://yourdomain/photos/david_small.png]]&gt;&lt;/thumbnail&gt;</div>
+              <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span>&lt;details&gt;Hello :) I am 
+                David&lt;/details&gt;</div>
+              <div> <span class="Apple-tab-span" style="white-space:pre">&nbsp; </span> &lt;level&gt;regular&lt;/level&gt;<br />
+                &nbsp;
+                &lt;profileUrl&gt;http://yourdomain/profile/David&lt;/profileUrl&gt;&nbsp; </div>
+              <div> &lt;/userData&gt;<br />
+                <div> 
+                  <p>&lt;friends&gt;<br />
+                    &nbsp;&nbsp;&lt;friend id=&quot;1111&quot; name=&quot;Tom&quot; thumbnail=&quot;http://yourdomain/photos/tom_small.png&quot;/&gt;<br />
+                    &lt;/friends&gt;<br />
+  <br />&lt;blocks&gt;&nbsp;<br />
+  &nbsp;&nbsp;&lt;block id=&quot;2222&quot; name=&quot;Paul&quot; thumbnail=&quot;http://yourdomain/photos/paul_small.png&quot;/&gt;
+                    <br/>
+                    &lt;/blocks&gt;&nbsp;
+                  
+                  </p>
+                  <div>&lt;/login&gt;</div>
+                </div>
+              </div></td>
+          </tr>
+      </table>
+    </td>
+  </tr>
+</table>

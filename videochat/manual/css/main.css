@@ -1,0 +1,19 @@
+/* CSS Document */
+body { margin: 0px; padding: 0px; }
+td, p, body, input, select, textarea, textarea, input { font-family: Arial; font-size: 12px; }
+a:link, a:active, a:visited, a:hover { color: #1265B8; text-decoration: underline; }
+
+
+.header1 { font-family:"trebuchet MS", Arial, Tahoma; font-size:18px; color:#1265B8; padding-left:20px; }
+.header2 { font-family:"trebuchet MS", Arial, Tahoma; font-size:18px; color:#4C5666; padding-left:20px; }
+
+h1 { color: #1265B8; font-size:22px; font-family:"trebuchet MS", Arial, Tahoma; }
+
+.edition { font-family:"trebuchet MS", Arial, Tahoma; font-size:16px; color:#000000; font-weight:700; }
+.code { font-family:"Courier New", Courier, monospace; }
+.number { font-weight:700; color:#1265B8; }
+
+.context1 { padding-left:0px; }
+.context2 { padding-left:15px; }
+
+.hidden {display:none}

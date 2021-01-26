@@ -1,0 +1,60 @@
+<head>
+    <style type="text/css">
+
+
+.code { font-family:"Courier New", Courier, monospace; }
+        </style>
+</head>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Redefining JS Callbacks</h1>
+      <p>JS callbacks are used to establish communication between Chat 
+        application and your web site. For example add a user to friends list, report a 
+        user, etc. Flash object calls relevant JS functions with parameters. </p>
+        <p>You can redefine these functions&nbsp; and add custom code to perform the required 
+            action. In most cases you will have to use AJAX to do that.</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><div>function Z5ChatEvent(event, param1, param2)</div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>{</div>
+<div><span class="Apple-tab-span" style="white-space:pre">			</span>switch(event)</div>
+<div><span class="Apple-tab-span" style="white-space:pre">			</span>{</div></div>
+<div><span class="Apple-tab-span" style="white-space:pre">				</span>case 'addFriend':</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var userID = param1;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var friendID = param2;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>// TODO add your code here</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>break;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">				</span>case 'removeFriend':</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var userID = param1;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var friendID = param2;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>// TODO add your code here</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>break;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">				</span>case 'block':</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var userID = param1;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var blockID = param2;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>// TODO add your code here</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>break;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">				</span>case 'unblock':</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var userID = param1;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var blockID = param2;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>// TODO add your code here</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>break;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">				</span>case 'abuse':</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var userID = param1;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;&nbsp;					</span>var friendID = param2;</div>
+<div>&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;					</span>break;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">&nbsp;&nbsp;			</span>}</div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>}</div>
+<p>&nbsp;</p></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+    
+   
+

@@ -1,0 +1,87 @@
+[08-Nov-2018 07:47:32 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2363
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2363
+[08-Nov-2018 07:47:33 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Row() on null in /home/advandate/public_html/demo/inc/func/globals.php:4977
+Stack trace:
+#0 /home/advandate/public_html/demo/inc/ajax/_actions.php(32): Build_BankChecker()
+#1 {main}
+  thrown in /home/advandate/public_html/demo/inc/func/globals.php on line 4977
+[08-Nov-2018 07:47:34 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Row() on null in /home/advandate/public_html/demo/inc/func/globals.php:4977
+Stack trace:
+#0 /home/advandate/public_html/demo/inc/ajax/_actions.php(32): Build_BankChecker()
+#1 {main}
+  thrown in /home/advandate/public_html/demo/inc/func/globals.php on line 4977
+[08-Nov-2018 07:47:35 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2220
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2220
+[08-Nov-2018 07:47:35 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2220
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2220
+[08-Nov-2018 07:47:35 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2220
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2220
+[08-Nov-2018 07:47:40 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Row() on null in /home/advandate/public_html/demo/inc/func/globals.php:4977
+Stack trace:
+#0 /home/advandate/public_html/demo/inc/ajax/_actions.php(32): Build_BankChecker()
+#1 {main}
+  thrown in /home/advandate/public_html/demo/inc/func/globals.php on line 4977
+[08-Nov-2018 07:47:42 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2363
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2363
+[08-Nov-2018 07:47:44 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Row() on null in /home/advandate/public_html/demo/inc/func/globals.php:4977
+Stack trace:
+#0 /home/advandate/public_html/demo/inc/ajax/_actions.php(32): Build_BankChecker()
+#1 {main}
+  thrown in /home/advandate/public_html/demo/inc/func/globals.php on line 4977
+[08-Nov-2018 07:47:45 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2220
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2220
+[08-Nov-2018 07:47:45 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2220
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2220
+[08-Nov-2018 07:47:45 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2220
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2220
+[08-Nov-2018 07:47:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home/advandate/public_html/demo/inc/ajax/_actions.php:2363
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 2363
+[08-Nov-2018 07:47:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function Row() on null in /home/advandate/public_html/demo/inc/func/globals.php:4977
+Stack trace:
+#0 /home/advandate/public_html/demo/inc/ajax/_actions.php(32): Build_BankChecker()
+#1 {main}
+  thrown in /home/advandate/public_html/demo/inc/func/globals.php on line 4977
+[09-Nov-2018 12:06:18 UTC] PHP Warning:  require_once(../config.php): failed to open stream: No such file or directory in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 30
+[09-Nov-2018 12:06:18 UTC] PHP Fatal error:  require_once(): Failed opening required '../config.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 30
+[09-Nov-2018 12:06:18 UTC] PHP Warning:  require_once(../config.php): failed to open stream: No such file or directory in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 30
+[09-Nov-2018 12:06:18 UTC] PHP Fatal error:  require_once(): Failed opening required '../config.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 30
+[09-Nov-2018 12:06:20 UTC] PHP Warning:  require_once(../config.php): failed to open stream: No such file or directory in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 30
+[09-Nov-2018 12:06:20 UTC] PHP Fatal error:  require_once(): Failed opening required '../config.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 30
+[09-Nov-2018 12:08:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Build_BankChecker() in /home/advandate/public_html/demo/inc/ajax/_actions.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 32
+[09-Nov-2018 12:10:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Build_BankChecker() in /home/advandate/public_html/demo/inc/ajax/_actions.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 32
+[09-Nov-2018 12:20:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Build_BankChecker() in /home/advandate/public_html/demo/inc/ajax/_actions.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 32
+[09-Nov-2018 12:20:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Build_BankChecker() in /home/advandate/public_html/demo/inc/ajax/_actions.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 32
+[09-Nov-2018 12:20:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Build_BankChecker() in /home/advandate/public_html/demo/inc/ajax/_actions.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/advandate/public_html/demo/inc/ajax/_actions.php on line 32

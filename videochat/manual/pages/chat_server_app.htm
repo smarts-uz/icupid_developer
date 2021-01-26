@@ -1,0 +1,164 @@
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+-->
+</style>
+ <h1><a name="chat_server_installation" id="3"></a>Chat Server Installation</h1>
+    <p>Unpack  chat server files on the server specified in the license. Note that java 1.6  should be installed on this server to run application.<br />
+      The <strong>Chat server</strong> &nbsp;package has the following file structure: </p>
+    <p>*.sh files in linux package only <br />
+*.bat files in windows package only </p>
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+      <tr>
+        <td><table bgcolor="#ffffdf" border="0" cellpadding="0">
+            <tr>
+              <td width="32"><img alt="dir" src="img/folder_icon.png" /></td>
+              <td width="79"><strong>chat_server</strong></td>
+              <td colspan="2">(contains chat server apps)</td>
+              <td width="291">&nbsp;&nbsp;&nbsp; </td>
+              <td width="20">&nbsp;&nbsp;&nbsp; &nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td width="32"><img alt="dir" src="img/folder_icon.png" /></td>
+              <td width="163"><strong>libs</strong> </td>
+              <td>- jar files ( with their libraries and own jar servers)</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td><img alt="dir" src="img/folder_icon.png" /></td>
+              <td><strong>logs</strong> </td>
+              <td>- that is where all logs are stored</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td><img alt="dir" src="img/folder_icon.png" /></td>
+              <td><strong>settings</strong> </td>
+              <td>- that is where all settings can be found</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>main.properties</td>
+              <td>- parameters of launching server</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td colspan="2">flashcoms_chat_server.sh</td>
+              <td>-  launch of daemon (linux/mac)<u></u><u></u></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td colspan="2">run.sh<strong></strong></td>
+              <td>- script for launching in&nbsp;  (linux/mac)</td>
+              <td>&nbsp;</td>
+            </tr>
+            
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td colspan="2">shutdown.sh</td>
+              <td>- script for correct determination (linux/mac) </td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td colspan="2">run.bat</td>
+              <td>- script for launching console (windows) </td>
+              <td>&nbsp;</td>
+            </tr>
+            
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td colspan="2">start.bat</td>
+              <td> - script for launching service (windows) </td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+              <td colspan="2">stop.bat</td>
+              <td>-  script for determination of service (windows) </td>
+              <td>&nbsp;</td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p>default.admin.settings.xml &ndash; that is where all default settings for admin panel are stored. After the first launch of the server  (if the file admin.settings.xml is missing) it is copied to admin.settings.xml.  Afterwards all the settings are read and recorded in admin.settings.xml.  default.admin.settings.xml remains unchanged in case all the settings will need  to be set back to default. <u></u><u></u></p>
+    <p class="style1">Linux  Installation:    </p>
+    <p>In linux version there are pre-setup, as required for particular  package. This is conducted by the package compilator.<u></u><u></u></p>
+    <table border="0" cellspacing="0" cellpadding="0">
+      
+      <tr>
+        <td height="27" align="left" valign="top">1.</td>
+        <td align="left" valign="top">put executable rights (755) on run.sh, shutdown.sh,<u></u><u></u> flashcoms_chat_server.sh<u></u><u></u></td>
+      </tr>
+      <tr>
+        <td width="26" height="27" align="left" valign="top">2.</td>
+        <td width="610" align="left" valign="top">copy flashcoms_chat_server.sh to    /etc/init.d</td>
+      </tr>
+      
+      <tr>
+        <td width="26" height="27" align="left" valign="top">3.</td>
+        <td width="610" align="left" valign="top">configure firewall and open ports indicated in settings/main.properties</td>
+      </tr>
+    </table>
+    <p>Now server can be run as service:<u></u><u></u><br />
+      <strong>/etc/init.d/flashcoms_chat_server.sh  start</strong><br />
+      <strong>/etc/init.d/flashcoms_chat_server.sh  stop</strong><br />
+      <strong>/etc/init.d/flashcoms_chat_server.sh  restart</strong> </p>
+    <p>In linux version handlers are already pre-setup for client&rsquo;s domain.  In windows version handlers are set to localhost and will need to be modified.<u></u><u></u></p>
+    <p><strong>&nbsp;./run.sh </strong></p>
+    <p>by default ./run.sh is launched in background and the display of the  server in console is not visible. But everything can be seen in logs<u></u><u></u></p>
+    <p>less logs/chat-server.log<u></u><u></u></p>
+    <p>tail -f logs/chat-server.log (for tracking logs in real time)<u></u><u></u></p>
+    <p>Background mode is not a service yet. If you close console, server  will stop.<u></u><u></u></p>
+    <p><strong>./run.sh console</strong></p>
+    <p>It is launched in foreground and&nbsp;all output&nbsp;is written to  the&nbsp;server&nbsp;console.<br />
+      It is useful for debugging.<u></u><u></u></p>
+    <p><strong> Deletion of Chat Server on Linux</strong></p>
+    <div>Save a reserve copy of server settings</div>
+    <div>Delete catalogue, where the server was installed</div>
+    <div>Delete&nbsp;/etc/init.d/flashcoms_chat_server.sh</div>
+    <p>&nbsp;</p>
+    <p class="style1">Windows  Installation: </p>
+    <p><em>In windows version parameters are pre-setup for localhost and with  default ports. This file is stored inside installator and will be the same for  all packages.</em></p>
+    <p>Launch installer&nbsp;chat_server.msi, which is included in the package</p>
+    <div>
+      <p><img src="img/windows_installer_1.png" width="540" height="425" /></p>
+    </div>
+    <div>
+      <p>Accept the license</p>
+      <p><img src="img/windows_installer_2.png" width="540" height="425" /></p>
+    </div>
+    <div>
+      <p>Choose catalogue where to complete installation</p>
+      <p><img src="img/windows_installer_3.png" width="540" height="425" /></p>
+      <p><img src="img/windows_installer_4.png" width="540" height="425" /></p>
+    </div>
+    <div>Server will be installed and launched as a system service</div>
+    <div>You will then see two icons appear on your desktop:&nbsp;</div>
+    <div>-Start Flashcoms Chat Server</div>
+    <div>-Stop Flashcoms Chat Server&nbsp;</div>
+    <div align="center" style="width:540px; height:425;">
+	<img src="img/windows_installer_5.png" width="400" height="283" />
+	</div>
+    <div>
+      <div></div>
+      <p>To configure chat server settings please do the following:</p>
+      <div>1) Stop flashcoms chat server service if it is started. </div>
+      <div>2) Copy configured default.admin.settings.xml from your package (chat_server/settings) to the chat server installation folder and rename it to admin.settings.xml. </div>
+      <div>3) Start flashcoms chat server service.</div>
+      <p>&nbsp;</p>
+    </div>
+    <div><strong>Deletion of Chat Server on Windows</strong></div>
+    <p>Launch installer&nbsp;chat_server.msi, which is included in the package </p>
+    <p><img src="img/windows_installer_6.png" width="540" height="425" /></p>
+    <div>Click on &quot;Remove&quot;</div>
+ 

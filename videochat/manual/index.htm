@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Flashcoms Community Chat</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+<script type="text/javascript">
+
+function makeBeauty(text){
+    return text.replace(/[^\w_\s]/g,'').toLowerCase().replace(/\s+/g,'_').replace(/[_]+$/,'').replace(/^[_]+/,'');
+}
+
+jQuery(document).ready(function(){
+    
+    $('#idNavTable a').click(function(e){
+        
+        if ($(this).hasClass('simpleLink')) return true;
+        
+        var link = $(this).attr('href').split('/').reverse()[0].split('#')[0];
+        
+        e.preventDefault();
+        
+        if ($(this).hasClass('menu'))
+        {
+            $('.'+link).toggle();
+        }
+        else
+        {
+            var vars = link.split("#"); 
+            var anchor = vars[1];
+            var support_form = $(this).is('*[href*=support_form]');
+            var path = support_form ? '' : 'pages/';
+            $("#idContent").load(location.pathname.replace('index.htm','')+path+link, {}, function(){
+                if (anchor!='')    $.scrollTo('a#'+anchor);
+            });
+            location.hash=makeBeauty($(this).text());
+        }
+    })
+    .each(function(){
+        var t = $(this).text();
+        var hash = makeBeauty(t);
+        $(this).attr('rel',hash);
+    });
+    
+    
+    if (location.hash)
+        $('#idNavTable a[rel='+location.hash.substr(1)+']').trigger('click');
+    
+});
+
+</script>
+<style type="text/css">
+    #idContent
+    {
+        height: 266px;
+    }
+
+	 .menu > tbody > tr > td {
+	        white-space: pre-wrap; /* css-3 */
+	        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	        white-space: -pre-wrap; /* Opera 4-6 */
+	        white-space: -o-pre-wrap; /* Opera 7 */
+	        word-wrap: break-word; /* Internet Explorer 5.5+ */
+	    }
+
+</style>
+</head>
+<body>
+   
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="img/header/bg.gif">
+  <tr>
+    <td width="300" align="center"><img src="img/header/logo.gif" width="244" height="98" /></td>
+    <td width="1"><img src="img/header/del.gif" width="2" height="98" /></td>
+    <td><p><span class="header1">Flashcoms Community Chat v.7.1</span><br />
+        <span class="header2">Installation/Integration Manual</span></p></td>
+  </tr>
+</table>
+<table width="1194" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="436" style="padding: 10px 0px 30px 10px;vertical-align:top;" nowrap="nowrap"><br />
+      <table class="menu" width="426" border="0" align="left" cellpadding="3" cellspacing="0" id="idNavTable">
+        <tr>
+          <td width="185"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="videochat_subs" onclick="return false" class="menu"><strong>Genera Overview</strong></a></td>
+          <td width="29">&nbsp;</td>
+          <td width="194"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="avatar_mode_subs" onclick="return false" class="menu"><strong>Advanced Integration</strong></a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/general_overview.htm">General Overview</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/securing_presence_code.htm">Securing Parameters</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/package_content.htm">Content of the Package</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/online_presence_feed.htm">Online Presence Feed</a></td>
+        </tr>
+        <tr>
+          <td width="185"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="adding_chat_to_website_subs" onclick="return false" class="menu"><strong>Installation</strong></a> </td>
+          <td class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/chat_logs.htm">Chat Logs</a></td>
+        </tr>
+        <tr>
+          <td class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/chat_server_app.htm">Chat Server Installation </a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/redefining_callbacks.htm">Redefining JS Callbacks</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/media_server_app.htm">Media&nbsp;Server&nbsp;Installation </a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/friends_integration.htm">Friends/Block List Integration</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/messenger_setup.htm">Web Server  Setup</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="integration_users_db_subs" onclick="return false" class="menu"><strong>Chat Customization</strong></a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/flash_security.htm">Flash Security Policy</a></td>
+          <td width="29">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/input_buttons.htm">Input Toolbar Buttons </a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/mp3_install.htm">MP3 Player Installation</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/application_skinning.htm">Application Skinning</a></td>
+        </tr>
+        <tr>
+          <td width="185"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="testing_setup_subs" onclick="return false" class="menu"><strong>Troubleshooting</strong></a> </td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_skin.htm">Skins Management </a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/troubleshooting.htm">Enable Debug Mode</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="integration_profile_subs" onclick="return false" class="menu"><strong>Chat Administration</strong></a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/testing_setup.htm">Running Debug</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/invisible_admin.htm">Invisible Admin</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/error_code.htm">Error Codes</a></td>
+          <td width="29">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_rooms.htm">Room Management</a></td>
+        </tr>
+        <tr>
+          <td width="185"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="add_chat_website" onclick="return false" class="menu"><strong>Adding Chat to Your Website</strong></a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_bans.htm">Bans Management</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/popup_mode.htm">Popup /Fullscreen /Embedded Mode</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_general.htm">General Settings</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/chat_widget.htm">Chat Widget</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_loginscreen.htm">Registration Screen</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/mobile_client.htm">Mobile Client </a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_languages.htm">Languages</a></td>
+        </tr>
+        <tr>
+          <td width="185"><img src="img/li1.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="videochat_handlers_subs" onclick="return false" class="menu"><strong>Basic Integration</strong></a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_flood.htm">Flood Control</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/integration_1.htm">How&nbsp;Site&nbsp;Authorization&nbsp;Works</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/admin_filter.htm">Word Filtering</a></td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/handler_setup.htm">Handlers Setup</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="185" class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/coding_handler.htm">Login Handlers</a></td>
+          <td class="context2">&nbsp;</td>
+          <td class="context2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/check_guest_handler.htm">Guest Handler</a></td>
+          <td class="context2">&nbsp;</td>
+          <td class="context2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="context2"><img src="img/li2.gif" alt="1" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/user_profile_handler.htm">User Profile Handler</a></td>
+          <td width="29" class="context2">&nbsp;</td>
+          <td width="194" class="context2">&nbsp;</td>
+        </tr>
+        
+        <!--   <tr class="add_chat_website ">
+          <td class="context2"><img src="img/li2.gif" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/embed_mode.htm">Embedded mode</a></td>
+        </tr>-->
+           
+          <!--  <tr class="videochat_handlers_subs ">
+          <td class="context2"><img src="img/li2.gif" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/logout_handler.htm">Logout handler</a></td>
+        </tr>
+              <tr class="videochat_handlers_subs ">
+          <td class="context2"><img src="img/li2.gif" width="7" height="13" hspace="2" align="absmiddle" /><a href="pages/full_profile_handler.htm">Full Profile handler</a></td>
+        </tr>-->
+      </table></td>
+	  <td width="758" style="padding:10px 10px 30px 20px;vertical-align:top;text-align:left">
+		<div id="idContent">
+			<br />
+			&nbsp;<img alt="" src="img/logos/community_chat_logo.png" 
+                style="width: 213px; height: 207px; padding-left: 40px;" /><div><h1>Empowering your community!</h1></div></div>	  </td>
+  </tr>
+</table>
+</body>
+</html>

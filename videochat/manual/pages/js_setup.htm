@@ -1,0 +1,46 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        JS and Presence pixel setup</h1>
+    <p><b>1. </b>Add the following string to header section of the html page. The most 
+        common practice is to have this reference added to global website template. </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p class="code">
+                        &lt;script    language=&quot;JavaScript&quot; src=&quot;http://your-domain.com/messenger7/js/im.js&quot;&gt;<br />
+          &lt;/script&gt;</p>
+          </td>
+      </tr>
+    </table>
+    <p>    <b>2.</b> Now we need to add presence code responsible for user's authentication 
+           and online status update. Online presence code should be set globally throughout 
+           entire website, otherwise user won&#39;t be visible for the system and no chat 
+        request can be sent / received. The most common practice is to have presence code embedded into 
+           global template:</p>
+    <p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#ffffdf" style="padding:7px;"><p>&nbsp;&lt;div style=&quot;width:1px;height:1px&quot;&gt;&nbsp;</p>
+            <div>&nbsp;&nbsp; &nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;script type=&quot;text/javascript&quot;&gt;&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>try {<span class="Apple-tab-span" style="white-space:pre">		</span></div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>z5messenger.uid = '2010';<span class="Apple-tab-span" style="white-space:pre">	</span></div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span></div>
+<div><span class="Apple-tab-span" style="white-space:pre">		</span>z5messenger.StartPresence();</div>
+<div>&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>} catch(err) {}</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;/script&gt;&nbsp;</div>
+<div><span class="Apple-tab-span" style="white-space:pre">	</span>&lt;/div&gt;&nbsp;</div></p>
+          </td>
+      </tr>
+    </table>
+        </p>
+    <p>The main parameter we will be using throughout entire integration process is "UID". This a global user identifier used to retrieve profile and authentication data. At this phase of installation we set it to random value of  "2010" to verify that all the steps were performed successfully.</p>
+   
+
+        <p>
+        </p>
+   
+

@@ -1,0 +1,391 @@
+ /* page body
+---------------------------------------------------------------------------- */
+  
+body {  
+	font-size:85%;
+	font-family: Arial, sans-serif;
+	/*color:#444444;*/
+	padding: 0px 0 10px 0;
+	margin: 0;
+}
+h1, h2, h3{
+	color:#66c3ee;
+}
+p { color:#444444; }
+h2 {
+	font-size:21px;
+	font-weight:bold;
+	color:#66c3ee; 
+	text-align:left;
+}
+h3 {
+	font-weight:bold;
+	color:#66c3ee; 
+	text-align:left;
+}
+
+/* MAIN HEADER BAR, OFTEN WHERE THE LOGO IS */
+
+/* MAIN CONTAINER, SITES UNDER THE HEADER */ 
+#page_container { 
+	 background: white; display:block; 
+}
+/* THIS IS THE INNER CONTENT WRAPPER, FILLS THE CONTENT SECTION NOT THE MENU BAR */
+#main_content_wrapper { 
+background: transparent url('../../../images/body_wrapper_top.jpg') top left no-repeat;   margin-right:10px;
+}
+
+#main_wrapper_bottom {
+	/*background: transparent url('../../../images/v18_teal/main_wrapper_bottom.jpg') no-repeat top right;  margin-right:5px;*/
+ 	height:49px; display:none; 
+}
+
+#top_banner img { margin-right:20px;}
+
+
+/* page footer
+---------------------------------------------------------------------------- */
+
+#page_footer {	margin-bottom:0px; background-color:#fff;/* height:60px; */} 
+#page_footer .footer_menu { margin-bottom:0px;}
+.footer_tabs a { color: #FFF; }
+#bottomBar{	color: #fff; background: #66c3ee; }
+#bottomBar h4{ 	background-color: #DB3D31; color:#ffffff; }
+#bottomBar .col1 li, #links li {	border-bottom:1px dotted #ffffff;	}
+
+
+/* two main buttons
+---------------------------------------------------------------------------- */
+
+/*A.MainBtn, input.MainBtn {background: #66c3ee; color:#ffffff; }*/
+/*A.NormBtn, input.NormBtn {background: url( '../../images/DEFAULT/_buttons/bg-grygradlarge.gif' ) 0px 0px repeat-x; }*/
+
+
+/* link styles
+---------------------------------------------------------------------------- */
+
+a { color:#333333; }
+a:active { color:#333333; }
+
+/* GREY TABLE BACKGROUND AND BAR ON THE HOME PAGE, CALENDAR AND CLASSADS PAGE
+---------------------------------------------------------------------------- */
+
+.inner_nav_bar { background:  #6B6A6C; color:#ffffff; font-weight:bold; }
+.inner_nav_body {background:#fff; }
+
+/* SIDE MENU BAR STYLES
+---------------------------------------------------------------------------- */
+
+#side_box { margin-left:0px; }
+#side_box .menu_box_body, .menu_box_body1, .album-gallery li, #FolderBody  .gallery li{ background: #ffffff;border-left:1px solid #C8C8C8;  border-right:1px solid #C8C8C8;   border-bottom:1px solid #C8C8C8;   
+}
+#side_box .menu_box_body { border-top:1px solid #C8C8C8; }
+#side_box .menu_box_body, #side_box .menu_box_title {  } 
+#side_box .menu_side span { color:#333333;}
+#side_box .menu_box_title, .menu_box_title1 {   font-weight:bold; height:21px; line-height:29px;}
+#side_box .menu_box_title span, .menu_box_title1 span { display:none; }
+
+/* TOP MENU BAR AND SUBBAR
+---------------------------------------------------------------------------- */
+
+
+.sub_menu {	 float:left; width:100%; }
+.menu, .sub_menu { width:100%; margin:left:0px; margin-right:0px;   }
+ 
+/* MENU BOX EXPAND 
+---------------------------------------------------------------------------- */
+
+.menu_expand {	background: #23A8D7 url("../../../images/DEFAULT/_acc/menu_background_expand.gif") no-repeat 0 0; cursor:pointer;}
+.menu_noexpand {background: #23A8D7 url("../../../images/DEFAULT/_acc/menu_background_noexpand.gif") no-repeat 0 0; cursor:pointer;}
+.menu .i1 { margin-left:10px;}
+.tabs li a{	color: #fff; margin-right:30px; font-size:100%;line-height:40px; width:auto !important;}
+.tabs li a:hover, .tabs li .selected { 	color: #fff;}
+.tabs li .selected {}
+
+.sub_tabs li a {color:#666; }
+.sub_tabs li a:hover { border-bottom:2px solid #66c3ee;  } 
+
+
+/* MEMBERS ONLINE TEXT IN MENU BAR
+---------------------------------------------------------------------------- */
+
+.onlinenow a { color:#666666; font-size:12px;}
+
+/* ACCOUNT PAGE STYLES
+---------------------------------------------------------------------------- */
+
+#Acc_Heading { margin-top:5px;}
+#Acc_Heading .title { color:#ffffff; font-size:130%; margin:0px;}
+#Acc_Heading .text { font-size:110%; color:#ffffff; }
+#Acc_Heading .a1 img { border:3px solid #ffffff;}
+/* MAIN ACCOUNT BOXEX */
+.CapTitle { 	background:#6B6A6C; display:none;}
+.CapBody { 	background: #F1F1F1 url('../../../images/DEFAULT/_acc/inner_box_bg.gif') repeat-x; 	border:1px solid #cccccc;}
+/* SEARCH RESULTS BAR */
+#eMeetingContentBox #Results { background: #e1e1e1; border-bottom:1px solid #eeeeee;}
+/*.search_display_on { background:#b0e2f5;}*/
+.search_display_off { background:transparent;}
+
+
+/* INNER BACKGROUND IMAGES DISPLAYED AT THE TOP OF MOST PAGES
+---------------------------------------------------------------------------- */
+
+.TopVideos, .TopTour, .TopUpgrade, .TopSettings, .TopRegister, .TopMusic, .TopMessages, .TopMatches, .TopMap, .TopLogin, .TopLinks, .TopInvite, .TopGroups, .TopGames,
+.TopGallery, .TopForum, .TopFAQ, .TopContact, .TopAdverts, .TopChatRoom, .TopCalendar, .TopBlog, .TopArticles, .TopAffiliate, .TopAccount
+span { color:#ffffff; font-weight:bold; }
+
+.TopVideos, .TopTour, .TopUpgrade, .TopSettings, .TopRegister, .TopMusic, .TopMessages, .TopMatches, .TopMap, .TopLogin, .TopLinks, .TopInvite, .TopGroups, .TopGames,
+.TopGallery, .TopForum, .TopFAQ, .TopContact, .TopAdverts, .TopChatRoom, .TopCalendar, .TopBlog, .TopArticles, .TopAffiliate, .TopAccount
+ {  background: url(../../../inc/templates/v18_teal/images/inner_top_menu.jpg) no-repeat;  }
+
+
+/* PROFILE PAGE STYLES
+---------------------------------------------------------------------------- */
+
+#ProfileHead { background: #66c3ee;/*background: #66c3ee url('../../../images/DEFAULT/profile_backdrop.png') repeat-x top left;*/} /* LEAVE IMAGE FOR PROFILE BACKDROP */
+#ProfileUsernameBox h1, #ProfileUsernameBox h2, #ProfileUsernameBox p {  color:white; }
+#profile_nav_bar { background: #8BA6C3; }
+.profile_tabs  li a { color:white;}
+.profile_tabs .selected a{ color:#E54539; }
+#profile_menu_display { 	background:#eeeeee;	border: 1px solid #999999;}
+.profile_box_title { background-color: #66c3ee; border:1px solid #999999; /*width:395px;*/ font-size:12px; /*margin-left:8px;*/ border-bottom:0px;}
+.profile_box_title .goL{ color:#FFFFFF; }
+.profile_box_body { border: 1px solid #999999; /*width:395px;*/ /*margin-left:8px;*/}
+.profile_box_title .goR , .profile_box_title .goR a {/*color: #ffffff;*/}
+
+#ProfileOptionsBox { border:1px solid #999999; background:#eeeeee; }
+
+
+/* home page styles
+---------------------------------------------------------------------------- */
+
+/* SLIDER BACKGROUND COLOR */
+.pagination a:hover, .pagination a.selected{ background: #66c3ee; color:white;}
+.pagination a  { background: #4C9DDF; border-bottom:1px solid white; color:white; }
+.sliderwrapper { height:273px; }
+.HomeSearch { color:white; }
+.HomeMembers { color:white;}
+.s5_searchbox { color:#666666; }
+
+/* CONTROL BAR MENU
+---------------------------------------------------------------------------- */
+
+#MenuControlHead .user_name { color:white;  }
+#MenuControlHead { background: url('../../../images/DEFAULT/_acc/control_t1.png') no-repeat; }
+#MenuControlList li { background: #333333 url('../../../images/DEFAULT/_acc/control_icon.gif') no-repeat; }
+#MenuControlBody .ListDisplay {background: url('../../../images/DEFAULT/_acc/control_tbg.gif'); }
+#MenuControlBody .ListDisplay_text {color:white; background:black;}
+#MenuControlBody .user_status {  color:white; }
+#MenuControlBody { background:black; color:white; }
+#MenuControlBot {  background: url('../../../images/DEFAULT/_acc/control_t3.gif') no-repeat; }
+#MenuControlBot a { color:#666666; }
+
+/* rounded coners
+---------------------------------------------------------------------------- */
+
+.b1f, .b2f, .b3f, .b4f, .contentf { /*background: #efefef;*/ color: #333333;}
+
+#copyright_bar { background:none; text-align:center; }
+#copyright_bar a { color:white; }
+
+.top-menu {width:100%; height:40px; bottom no-repeat;margin:0px;padding:0px; }
+.content-width{width:940px; margin:auto;}
+.banner{float:left; width:100%; background:#000;}
+.banner .home-banner{ float:left; width:100%; height:auto; background-size:cover !important;}
+.members-search{margin-left:0px; padding:10px; width:300px; margin-top:60px;}
+.members-search-info{color:white;background-color:rgba(196,48,46,0.8); border-radius: 5px;height: 230px; padding:25px; border: 2px solid #c47070; margin-top:50px;}
+.facebook-link{ float:left; width:100%; margin:10px 0px 50px;}
+.sub_tabs{float:left;}
+.sub_tabs li:first-child a span{padding-left:0px;}
+.sub_tabs li:first-child a{ margin:0px;} 
+.home-content{float:left; width:100%;}
+.home-content #style4 ul li{width:180px;}
+.home-content-banner{float: left; width: 100%; margin-bottom: 50px;}
+#page_footer ul.footer_tabs{text-align: center;}
+#page_footer .footer_tabs li{display:inline-block !important; float:none !important;}
+.logo_height{float:left;}
+.home-banner{text-align:center;}
+.home-banner img{max-width:100%;}
+
+@media (max-width: 1024px){
+#fullpage div#main_content_wrapper .conten_outer {
+		padding: 18px 16px !important;
+	}
+}
+
+@media (max-width: 768px){ 
+	
+	#splitpage #main:before {
+		height: 712px !important;
+	}
+	#fullpage .menu_box_body1 select.input {
+		width: 170px !important;
+	}
+	#fullpage div#main_content_wrapper .conten_outer {
+		padding: 10px 16px !important;
+	}
+	
+	#ss_50 #sn_50-inplaceeditor input:first-child, #ss_49 #sn_49-inplaceeditor input:first-child, #ss_47 #sn_47-inplaceeditor input:first-child
+     {
+	 
+		 margin-left:10px !important;
+	 }
+	#fullpage div#side, #fullpage div#main, #fullpage div#quick-search
+	  {
+		width:100%!important; 
+	  }
+	#fullpage div#quick-search .mid-to 
+	  {
+    	padding-bottom: 23px !important;
+	  }
+}
+@media(max-width:500px){
+	#fullpage .gcatleft .groupAggregateDiv, .gcatright .groupAggregateDiv
+	{
+		margin:10px 0px !important;
+		min-height: 113px !important; 
+	}
+	#fullpage .gcatleft, .gcatright 
+	{
+		width: 100% !important;
+	}
+	#fullpage .groupAggregateDiv 
+	{
+		width: 100% !important;
+		padding-left: 0px !important;
+	}
+	#fullpage #Bottom a.MainBtn
+	{
+		margin-right: 3px !important;
+		padding: 4px 6px !important; 
+	}
+	#fullpage #profile-about .profile_friends_list .pImage 
+	{
+		width: 46% !important;
+	}
+	#fullpage #PageHeader .right-head
+	{
+		margin:0px !important;
+		float: left !important;
+	}
+	#fullpage #PageHeader .padding_5 {
+		padding: 0px !important;
+		width: 88px;
+	}
+	#fullpage .nav_button.hidden-lg.hidden-md {
+		width: 100% !important;
+	}
+	#MenuBar #mynav
+	{
+		margin-top: 10px !important;
+	}
+	#fullpage #eMeetingContentBox div#Title {
+    	margin-top: 10px;
+	}
+	#fullpage #eMeetingContentBox div#Title .AddIcon
+	{
+		margin-top:0px !important;
+	}
+}
+             /*start 3/5/18*/
+#bod_2 select, #bod_10 select, #bod_7 select, #NewMatch select, #UploadBox select
+{
+	border: 2px solid #e2e2e2 !important;
+    padding: 8px 10px !important;
+    border-radius: 3px !important;
+    outline: none !important;
+    display: inline-block !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    font-weight: normal !important;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+    content: '' !important;
+    background: #fff url(/images/dropdown.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 95% !important;
+}
+#side #side_box span#profile_responce_span {
+    float: none !important;
+    margin: auto !important;
+    width: 85% !important;
+	padding: 5px !important;
+}
+#side #side_box .user-general-info-sidebar
+{
+	margin-top: 52px !important;
+}
+#main div#eMeeting
+{
+	float:none !important;
+}
+#ss_50 #sn_50-inplaceeditor input:first-child, #ss_49 #sn_49-inplaceeditor input:first-child, #ss_47 #sn_47-inplaceeditor input:first-child
+{
+	width:52%;
+	margin-left:3px;
+}
+.advance_tdpostcode input.MainBtn_res {
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
+	padding: 6px 12px;
+}
+.margin-b select {
+    border: 2px solid #e2e2e2 !important;
+    padding: 8px 10px !important;
+    border-radius: 3px !important;
+    outline: none !important;
+    display: inline-block !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    font-weight: normal !important;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+    content: '' !important;
+    background: #fff url(/images/dropdown.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 95% !important;
+}
+#s77 .SearchOps li:last-child div
+{
+	margin-top:0px !important;
+}
+#s77 .SearchOps li:last-child div input.MainBtn {
+    padding: 0px 12px !important;
+}
+#UploadBox input, #UploadBox textarea, #fullpage .bd_padding_20 input
+{
+	width:100%;
+}	
+#UploadBox li:last-child input, #fullpage .bd_padding_20 li:last-child input
+{
+	width:auto !important;
+} 
+#fullpage #eMeetingContentBox .search_display_unapproved
+{
+	background:#fff !important;
+}
+#fullpage input.NormBtn {
+    margin-top: 3px;
+}
+#fullpage #eMeetingContentBox input.NormBtn {
+    padding: 5px 10px !important;
+}
+ #fullpage #header-section-13 h2.template_color {
+    font-weight: bold !important;
+	margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+#fullpage .gcatleft .groupAggregateDiv,#fullpage .gcatright .groupAggregateDiv
+{
+    border: 1px solid #cccccc !important;
+}
+#fullpage #quick-search
+{
+	margin-top:0px !important;
+}
+#fullpage #side_box {
+    margin-top: 0px !important;
+}

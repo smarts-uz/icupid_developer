@@ -1,0 +1,117 @@
+/* CSS Document */
+@import "eMeetingStyles_Layout.css";
+@import "eMeetingStyles_Content.css";
+@import "eMeetingStyles_Menus.css";
+@import "eMeetingTable.css";
+
+.eventful-badge,
+.eventful-badge * {
+  margin: 0             !important;
+  padding: 0            !important;
+  border: 0             !important;
+  text-align: center    !important;
+  color: #CCC           !important;
+  font-family: Arial    !important;
+  text-decoration: none !important;
+}
+
+.eventful-large {
+  position: relative    !important;
+  width: 140px          !important;
+  font-size: 15px       !important;
+  line-height: 17px     !important;
+  font-weight: bold     !important;
+}
+
+.eventful-medium {
+  position: relative    !important;
+  width: 100px          !important;
+  font-size: 12px       !important;
+  line-height: 13px     !important;
+}                     
+                      
+.eventful-small {     
+  position: relative    !important;
+  width: 100px          !important;
+  font-size: 11px       !important;
+  line-height: 11px     !important;
+}
+.countries-list{
+  float: left;
+  width: 100%;
+  padding: 0% 2%;
+  margin-bottom: 30px;
+}
+.countries-list li{
+  float: left;
+  width: 20%;
+  padding: 2px 0%;
+}
+.countries-list label{
+  padding: 0% 3% 0% 5%;
+}
+.countries-list input{
+  float: left;
+}
+.countries-list a{
+  text-decoration: underline;
+  color: blue;
+}
+
+.tab-report{
+    padding: 12.5px 14px !important;
+}
+
+.nav-tab {
+    float: left;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-left: .5em;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    background: #e5e5e5;
+    color: #555;
+}
+.nav-tab:hover{
+     background-color: #FFFFFF;
+}
+.active {
+    background-color: #FFFFFF !important;
+}
+.box {
+    float: left;
+    width: 96%;
+    padding: 10px 20px;
+}
+.report-left-sidebar {
+    width: 20%;
+    float: left;
+}
+.nav-tab-wrapper {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding-top: 9px;
+    padding-bottom: 0;
+    line-height: inherit;
+    float: left;
+    width: 100%;
+}
+.report-field {
+    float: left;
+    height: 63px;
+    padding: 10px;
+    border-top: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
+    width: 80%;
+}
+.report-field .report-amount {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+    padding-bottom: 6px;
+}
+.highcharts-button{
+  margin-left: 10px;
+}

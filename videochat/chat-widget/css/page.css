@@ -1,0 +1,65 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: top; }
+
+body { font:13px/1.231 sans-serif; *font-size:small; }
+select, input, textarea, button { font:99% sans-serif; }
+textarea { overflow: auto; }
+button {  width: auto; overflow: visible; }
+body, select, input, textarea { color: #444; }
+
+.left {float: left;}
+.clr {clear: both;}
+
+/********************************************************************************************************/
+
+body {
+	padding: 20px;
+}
+
+h1, h2 {
+	font-size: 20px;
+	padding: 0 0 10px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+.left-col, .right-col {
+	float: left;
+	width: 300px;
+	border: 2px #556b2f dashed;
+	padding: 10px;
+	margin-right: 20px;
+	background-color: #b5c796;
+}
+
+.right-col {
+	width: auto;
+}

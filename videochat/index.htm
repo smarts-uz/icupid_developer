@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+		"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Community Chat 7.1</title>
+	<style type="text/css">
+	h1
+	{
+		font-size:120%;
+		margin:0px;
+		padding:10px;
+		border:1px solid #6e7d8a;
+		background-color: #b0c9e7;
+	}
+	h2
+	{
+		font-size:110%;
+		margin-top:2em;
+		background-color: #ccffff;
+	}
+	div
+	{
+		margin-top:5px;
+		padding:10px;
+		border:1px solid #6e7d8a;
+		background-color:#e3eaf0;
+	}
+	</style>
+	<script type="text/javascript" src="./js/flashcoms.js"></script>
+
+
+        <link rel="stylesheet" href="chat-widget/css/chat-widget.css">
+    
+    	<script type="text/javascript" src="chat-widget/js/jquery.min.js"></script>
+    	<script type="text/javascript" src="chat-widget/js/chat-widget.js"></script>
+    
+        <link rel="stylesheet" href="chat_toolbar/css/community_chat_bar.css" type="text/css" media="screen">
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="chat_toolbar/js/community_chat_bar_script.js"></script>
+        <script type="text/javascript">
+            z5ChatToolbar.host="http://localhost:8888";
+            z5ChatToolbar.roomID = "room1";
+            z5ChatToolbar.onJoinLink = function() {z5chat.OpenPopup();};
+            z5ChatToolbar.ShowToolBar();
+        </script>
+</head>
+<body>
+
+<h1>Community Chat 7.1</h1>
+
+<div>
+<p><strong>Pre-created User Accounts</strong>:</p>
+<ul>
+<li><strong>David</strong> test</li>
+<li><strong>Amanda</strong> test</li>
+<li><strong>Steven</strong> test</li>
+<li><strong>Helen</strong> test</li>
+</ul>
+
+<table cellpadding="5">
+	<tr><td>Enter</td>
+	<td><a href="javascript:z5chat.OpenPopup()">Popup</a></td>
+	<td><a href="chat_embeded.htm">Embeded</a></td>
+	<td><a href="javascript:z5chat.OpenFullscreen()">Fullscreen</a></td></tr>
+<tr>
+		<td>Autologin as David</td><td><a href='javascript:z5chat.uid="d5b0ef4c8c51f303ecbaed81a6e078c5";z5chat.OpenPopup()'>Popup</a></td><td><a href='chat_embeded.htm?uid=d5b0ef4c8c51f303ecbaed81a6e078c5'>Embeded</a></td><td><a href='javascript:z5chat.uid="d5b0ef4c8c51f303ecbaed81a6e078c5";z5chat.OpenFullscreen()'>Fullscreen</a></td><td><a href='mobile-client/index.htm?uid=d5b0ef4c8c51f303ecbaed81a6e078c5'>Mobile</a></td></tr><tr>
+		<td>Autologin as Amanda</td><td><a href='javascript:z5chat.uid="360bf0e399f1bb7ab4f7e8f2681f031c";z5chat.OpenPopup()'>Popup</a></td><td><a href='chat_embeded.htm?uid=360bf0e399f1bb7ab4f7e8f2681f031c'>Embeded</a></td><td><a href='javascript:z5chat.uid="360bf0e399f1bb7ab4f7e8f2681f031c";z5chat.OpenFullscreen()'>Fullscreen</a></td><td><a href='mobile-client/index.htm?uid=360bf0e399f1bb7ab4f7e8f2681f031c'>Mobile</a></td></tr><tr>
+		<td>Autologin as Steven</td><td><a href='javascript:z5chat.uid="d21d2117a705e8802a5f393f210afad0";z5chat.OpenPopup()'>Popup</a></td><td><a href='chat_embeded.htm?uid=d21d2117a705e8802a5f393f210afad0'>Embeded</a></td><td><a href='javascript:z5chat.uid="d21d2117a705e8802a5f393f210afad0";z5chat.OpenFullscreen()'>Fullscreen</a></td><td><a href='mobile-client/index.htm?uid=d21d2117a705e8802a5f393f210afad0'>Mobile</a></td></tr><tr>
+		<td>Autologin as Helen</td><td><a href='javascript:z5chat.uid="ebc5d2e55bd32ddd4d66beb9dab80b54";z5chat.OpenPopup()'>Popup</a></td><td><a href='chat_embeded.htm?uid=ebc5d2e55bd32ddd4d66beb9dab80b54'>Embeded</a></td><td><a href='javascript:z5chat.uid="ebc5d2e55bd32ddd4d66beb9dab80b54";z5chat.OpenFullscreen()'>Fullscreen</a></td><td><a href='mobile-client/index.htm?uid=ebc5d2e55bd32ddd4d66beb9dab80b54'>Mobile</a></td></tr></table>
+</div>
+
+<div>
+<p><a href="admin/admin.htm">Enter Admin Tool</a> |
+<a href="broadcasting/broadcasting.htm">View Broadcasting</a> |
+<a href="text_only.htm">Text Only Mode</a></p>
+
+<p><a href="chat-widget/index.htm">Enter Chat Widget</a> |
+<a href="mobile-client/index.htm">Enter Mobile Chat</a></p>
+</div>
+
+<p>Copyright © 2004-2013 Chat software by <a href="http://www.flashcoms.com">FlashComs.com</a></p>
+</body>
+</html>

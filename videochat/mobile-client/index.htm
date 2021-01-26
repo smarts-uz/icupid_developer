@@ -1,0 +1,484 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<title>Flashcoms Chat 7.1</title>
+	<link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+<!-- CONTAINER -->
+<div class="chat-page" id="container"></div>
+
+<!-- TEMPLATES -->
+
+<!-- LOADING SCREEN -->
+<script type="html/template" id="tplLoadingScreen">
+	<div class="screen screen-loading">
+		<div id="chat-version">version 7.1</div>
+		<div id="loading-msg"> Connecting to server...</div>
+	</div>
+</script>
+
+<!-- LOGIN SCREEN -->
+<script type="html/template" id="tplLoginScreen">
+	<div class="screen screen-login clearfix" id="login-screen">
+		<div class="login-box">
+			<h1 class="login-header">
+				<img src="img/logo-community-chat-with-title@2x.png" alt="Community Chat">
+			</h1>
+			<form id="login-form">
+				<ul>
+					<li>
+						<label for="login-guest" id="guestCheckBox">
+							<input type="checkbox" class="login-guest" id="login-guest">
+							Guest login
+						</label>
+					</li>
+					<li>
+						<input type="text" id="username" class="login-username" placeholder="Username">
+					</li>
+					<li id="password-row">
+						<input type="password" class="inp login-password" placeholder="Password">
+					</li>
+					<li id="gender-row" class="none">
+						<label for="gender-male"><input type="radio" name="gender" id="gender-male" value="male" checked> Male</label>
+						<label for="gender-female"><input type="radio" name="gender"  id="gender-female" value="female"> Female</label>
+					</li>
+					<li>
+						<button type="button" class="btn-login">Login</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div class="login-actions">
+			<a href="#forgot" id="link-forgot"><img src="img/btn-back@2x.png" alt="" > Forgot password?</a>
+			<a href="#register" id="link-register">Register <img src="img/btn-fwd@2x.png" alt=""  ></a>
+		</div>
+	</div>
+</script>
+
+<!-- SELECT ROOM SCREEN -->
+<script type="html/template" id="tplSelectRoomScreen">
+	<div class="screen screen-room-selection" id="room-screen">
+		<h1>Select a room</h1>
+
+		<ul class="list rooms-list">
+			{% for room in rooms %}
+			<li class="room" rel="{{ room.id }}" id="{{ room.id }}">
+				<a>
+					<span class="room-title">
+						<div><i class="icon i-room" style="background: {{ _.dec2hex(room.color) }}"></i> {{ room.name }}</div>
+                        <div>
+                            <input class="rpass" type="text" value="enter password here" hidden="true" rel="{{ room.id }}"/>
+                            <input class="rpassbutton" type="button" value="ok" hidden="true"/>
+                        </div>
+					</span>
+					<span class="user-count">
+						<i class="icon i-users i-16"></i>
+						<span>{{ room.numUsers }}</span>
+					</span>
+					<span class="arr">
+						<i class="icon i-go-arr"></i>
+					</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</script>
+
+<!-- CHAT SCREEN -->
+<script type="html/template" id="tplChatScreenWide">
+	<div class="header">
+		{{ user.name }}
+		<a href="javascript:void(0)" class="chat-logout">Logout</a>
+	</div>
+
+	<div class="main">
+		<div class="main-inner-wrap">
+
+			<div class="col col-main">
+				<div class="col-inner-wrap">
+
+					<!-- Tabs bar -->
+					<div class="bar">
+						<div class="bar-inner tabs"></div>
+					</div>
+
+					<!-- Messages -->
+					<div class="scroller">
+						<div class="scroller-inner messages-container"></div>
+					</div>
+
+					<!-- Write message tools bar -->
+					<div class="bar">
+						<div class="bar-inner write-tools">
+							<form class="form">
+								<input type="text" class="message-input">
+								<button type="submit">Cend</button>
+							</form>
+						</div>
+					</div>
+
+				</div><!--/.col-inner-wrap-->
+			</div><!--/.col-mail-->
+
+			<div class="col col-aside">
+				<div class="col-inner-wrap">
+
+					<div class="scroller">
+						<div class="scroller-inner sidebar"></div>
+					</div>
+
+				</div><!--/.col-inner-wrap-->
+			</div><!--/.col-aside-->
+
+		</div><!--/.main-inner-wrap-->
+	</div><!--/.main-->
+</script>
+
+<script type="html/template" id="tplChatScreenNarrow">
+	<div class="screen screen-tab-chat {{ settings.skin }}">
+
+		<!-- Header -->
+		<div class="toolbar">
+			<div class="half-2">
+				<ul class="tabs">
+					<li class="_page tab" rel="rooms">
+						<i class="icon i-rooms"></i>
+						<span class="room-label">Rooms</span>
+					</li>
+					<li class="_page tab" rel="users">
+						<i class="icon i-users"></i>
+						<span class="room-label">Users</span>
+					</li>
+					<li class="_page tab" rel="settings">
+						<i class="icon i-settings"></i>
+						<span class="room-label">Settings</span>
+					</li>
+				</ul>
+			</div>
+			<div class="_back half-1 none">
+				<a class="_back-page btn-back">Back</a>
+			</div>
+		</div>
+
+		<!-- Container with messages and pages -->
+		<div class="tab-content tab-content-chat-room">
+			<div class="_messages-container room-msgs-container" id="room-msgs-container"></div>
+
+			<form class="input-box _write-tools">
+				<div class="msg-input-container">
+					<input type="text" id="msg-field" class="_message-input" maxlength="250">
+				</div>
+				<div class="send-btn-container">
+					<button id="btn-send" type="submit">Send</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="_pages-container tab-content none"></div>
+
+	</div>
+</script>
+
+<!-- TABS -->
+<script type="html/template" id="tplTabs">
+	<div class="_room-title half-1">
+		<i class="icon i-room-toolbar" style="background: {{ _.dec2hex(room.color) }}"></i>
+		<div class="room-name" id="tab-{{ room.id }}">{{ room.name }}</div>
+	</div>
+    <div class="detail-description" id="detail-description">
+        <div class="room-description">{{ room.detailDescription }}</div>
+    </div>
+</script>
+
+<!-- MESSAGES -->
+<script type="html/template" id="tplMessages">
+	<div class="room-msgs _messages" id="messages-{{ room.id }}"></div>
+</script>
+
+<!-- CHAT MESSAGES -->
+<script type="html/template" id="tplMessage">
+	<div class="msg">
+		<span class="msg-time _time {{ +chatSettings.showTime ? '' : 'none' }}">{{ message.date|replace('^.*?(\\d{2}:\\d{2}):\\d{2}.*$', '$1') }}</span>
+		<b class="msg-author" rel="{{ sender.id }}" style="color: {{ _.dec2hex(sender.color) }}">
+			<i class="icon av _avatar av-{{ sender.avatarID }}" style="background: {{ _.dec2hex(sender.color) }}; {{ +chatSettings.showAvatar ? '' : 'display:none;' }}"></i>
+			{{ sender.name|stripTags }}</b>{% if receiver.name %} &gt; <span style="color: {{ _.dec2hex(receiver.color) }}">{{ receiver.name|stripTags }}</span>{% endif %}:
+			&nbsp;<span style="color: {{ _.dec2hex(message.textColor) }}; font-weight:{{ message.textBold ? 'bold' : 'normal' }}">{{ message.content|stripTags|parseLinks|emotions }}</span>
+            {% if message.youTubeLink %} <br /><a href="{{ message.youTubeLink|stripTags }}" target="_blank">{{ message.youTubeLink|stripTags }}</a>{% endif %}
+            {% if message.imageID %} <br />
+                <a href="{{chatSettings.imagesPath}}/{{ message.imageID }}.{{ message.imageExtension }}" target="_blank">
+                <img src="{{chatSettings.imagesPath}}//{{ message.imageID }}_s.{{ message.imageExtension }}"/></a>
+            {% endif %}
+	</div>
+</script>
+
+<script type="html/template" id="tplDrawing">
+	<div class="msg">
+		<span class="msg-time _time {{ +chatSettings.showTime ? '' : 'none' }}">{{ message.date|replace('^.*?(\\d{2}:\\d{2}):\\d{2}.*$', '$1') }}</span>
+		<b class="msg-author" rel="{{ sender.id }}" style="color: {{ _.dec2hex(sender.color) }}">
+			<i class="icon av _avatar av-{{ sender.avatarID }}" style="background: {{ _.dec2hex(sender.color) }}; {{ +chatSettings.showAvatar ? '' : 'display:none;' }}"></i>
+			<i>{{ sender.name|stripTags }}</b>  sent a drawing</i>
+	</div>
+</script>
+
+<!-- SIDEBAR ELEMENTS -->
+<script type="html/template" id="tplSidebarElementUsers">
+	<div id="element-user">
+		<h2 class="header">{{ name }}</h2>
+		<ul>
+		{% for user in collection %}
+			<li class="user">{{ user.name }} ({{ user.gender }})</li>
+		{% endfor %}
+		</ul>
+	</div>
+</script>
+
+<script type="html/template" id="tplSidebarElementRooms">
+	<h2 class="header">{{ name }}</h2>
+	<ul>
+	{% for room in collection %}
+		<li>{{ room.name }} ({{ room.numUsers }})</li>
+	{% endfor %}
+	</ul>
+</script>
+
+<!-- PAGES ROOMS -->
+<script type="html/template" id="tplPagesRooms">
+	<div class="tab-content-rooms">
+		<h1>Select a room</h1>
+		<ul class="list rooms-list">
+		{% for room in rooms %}
+			<li class="room" rel="{{ room.id }}">
+				<a>
+					<span class="room-title">
+                        <div><i class="icon i-room" style="background: {{ _.dec2hex(room.color) }}"></i> {{ room.name }}</div>
+                        <div>
+                            <input class="rpass" type="text" value="enter password here" hidden="true" rel="{{ room.id }}"/>
+                            <input class="rpassbutton" type="button" value="ok" hidden="true"/>
+                        </div>
+					</span>
+					<span class="user-count">
+						<i class="icon i-users i-16"></i>
+						{{ room.numUsers }}
+					</span>
+					<span class="arr">
+						<i class="icon i-go-arr"></i>
+					</span>
+				</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+</script>
+
+<!-- PAGES USERS -->
+<script type="html/template" id="tplPagesUsers">
+	<div class="tab-content-users">
+		<h1>Users in the "{{ room }}" room</h1>
+
+		<ul class="list users-list">
+			{% for user in users %}
+				{% if user.netStatus != 2 %}
+				{% set color = _.dec2hex(user.color) %}
+				<li rel="{{ user.id }}" class="_user">
+					<a style="color: {{ color }}">
+						<i class="icon av av-{{ user.avatarID }}" style="background: {{ color }}"></i>
+						{{ user.name }}
+					</a>
+				</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+</script>
+
+<!-- PAGES SETTINGS -->
+<script type="html/template" id="tplPagesSettings">
+	<div class="tab-content-settings">
+		<h1>Settings</h1>
+
+		<form class="_settings-form">
+			<table id="settings_avatar" class="tbl-settings">
+				<tr>
+					<td class="labels"><label for="usr-avatar">Your avatar & color:</label></td>
+					<td class="inputs" colspan=2>
+						<span class="avatar-picker">
+							<i class="icon av av-{{ user.avatarID }}" style="background-color: {{ chatSettings.color }}"></i>
+							<strong class="username-sample" style="color: {{ chatSettings.color }}">{{ user.name }}</strong>
+
+							<input type="hidden" name="avatarID" value="{{ user.avatarID }}" class="_avatar">
+							<input type="hidden" name="color" value="{{ chatSettings.color }}" class="_color">
+						</span>
+					</td>
+				</tr>
+				<tr class="none _settings-select-avatar">
+					<td colspan="3" class="avatars" >
+						<div class="colors-avs-container">
+							<div class="avatars-container">
+								{% for i in '01,02,03,04,05,06,07,08,09,10,11,12,15,16,17,18,19,20,21,22,23'.split(',') %}
+								<i id="av-{{ i }}" class="icon av av-{{ i }} {{ i == user.avatarID ? 'active' : '' }}" style="background: {{ chatSettings.color }}"></i>
+								{% endfor %}
+							</div>
+
+							<div class="colors-container">
+								{% for color in app.colors %}
+								<i id="color-{{ color|replace('#', '') }}" class="icon color-item {{ color == chatSettings.color ? 'active' : '' }}" style="background-color: {{ color }}"></i>
+								{% endfor %}
+							</div>
+
+							<button class="shinybtn avatar_ok" type="button">Ok</button>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+            <table id="settings_text" class="tbl-settings">
+                <tr>
+                    <td class="labels"><label for="usr-text">Your text color & weight:</label></td>
+                    <td class="inputs" colspan=2>
+						<span class="text-picker">
+							<strong class="usertext-sample" style="color: {{ chatSettings.textColor }}">text</strong>
+
+							<input type="hidden" name="textColor" value="{{ chatSettings.textColor }}" class="_color">
+						</span>
+                    </td>
+                </tr>
+                <tr class="none _settings-select-text">
+                    <td colspan="3" class="avatars" >
+                        <div class="colors-txt-container">
+
+                            <div id="settings_text_weight" class="inputs">
+                                <label>Bold text:</label>
+                                <input type="hidden" name="textBold" value="0">
+                                <input type="checkbox" class="_changable" name="textBold" value="1" {{ +chatSettings.textBold ? 'checked' : '' }}>
+                            </div>
+
+                            <div id="settings_text_color" class="colors-container">
+                                {% for color in app.colors %}
+                                <i id="color-{{ color|replace('#', '') }}" class="icon color-item {{ color == chatSettings.textColor ? 'active' : '' }}" style="background-color: {{ color }}"></i>
+                                {% endfor %}
+                            </div>
+
+                            <button class="shinybtn text_ok" type="button">Ok</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+			<div class="hr"></div>
+
+			<table class="tbl-settings">
+				<tr>
+					<td class="labels"><label for="inp-show-time">Show time:</label></td>
+					<td class="inputs">
+						<input type="hidden" name="showTime" value="0">
+						<input type="checkbox" class="_changable" id="inp-show-time" name="showTime" value="1" {{ +chatSettings.showTime ? 'checked' : '' }}>
+					</td>
+					<td class="td-last"></td>
+				</tr>
+				<tr>
+					<td class="labels"><label for="inp-show-avatars">Show avatars:</label></td>
+					<td class="inputs">
+						<input type="hidden" name="showAvatar" value="0">
+						<input type="checkbox" class="_changable" id="inp-show-avatars" name="showAvatar" value="1" {{ +chatSettings.showAvatar ? 'checked' : '' }}>
+					</td>
+					<td class="td-last"></td>
+				</tr>
+			</table>
+
+			<div class="hr"></div>
+
+			<table class="tbl-settings">
+				<tr>
+					<td class="labels"><label for="usr-color">Chat skin:</label></td>
+					<td class="inputs">
+						<select name="skin" id="usr-skin" class="_changable">
+							{% for key, skin in app.skins %}
+							<option value="{{ key }}" {{ key == chatSettings.skin ? 'selected' : '' }}>{{ skin }}</option>
+							{% endfor %}
+						</select>
+					</td>
+					<td class="td-last"></td>
+				</tr>
+			</table>
+		</form>
+	</div><!--/tab-content-settings-->
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/mobile-client.js"></script>
+
+<!--<script type="text/javascript" src="../html_client/json2.min.js"></script>
+<script type="text/javascript" src="../html_client/templ.min.js"></script>
+<script type="text/javascript" src="../html_client/templ.modifiers.js"></script>
+<script type="text/javascript" src="../html_client/spine.min.js"></script>
+<script type="text/javascript" src="../html_client/iscroll.js"></script>
+<script type="text/javascript" src="../html_client/_.js"></script>
+<script type="text/javascript" src="../html_client/mobile-client.js"></script>-->
+
+<script type="text/javascript">
+	/**
+	 * Application settings.
+	 */
+	var appSettings = {
+
+        uid: _.getParam('uid'),
+        //room: 'room1',
+
+		// Server backend hostname and port.
+		host: 'http://d5.flashcoms.com:10823',
+
+		// Chat settings.
+		// Skin names defined in CSS.
+		skins:  {'default': 'Default'},
+
+		// Available user text color.
+		colors: [
+			'#000000', '#dbdbdb', '#999999', '#666666', '#333333',
+			'#ff0000', '#ff6666', '#ff3333', '#cc0000', '#990000',
+			'#ff9600', '#eab600', '#cc9933', '#cc6600', '#844a11',
+			'#66cc00', '#99cc33', '#669900', '#336600', '#1e3e04',
+			'#00cc33', '#33cc66', '#339933', '#006633', '#00441d',
+			'#009999', '#00cccc', '#339999', '#006666', '#003333',
+			'#0099cc', '#33ccff', '#3399cc', '#006699', '#003366',
+			'#0066ff', '#0099ff', '#0066cc', '#0000ff', '#003399',
+			'#9933ff', '#9999ff', '#6666ff', '#6633ff', '#6600cc',
+			'#ff3366', '#ff6699', '#ff3399', '#cc0066', '#990066'
+		],
+
+		// Emotions which can be used
+		emotions: {
+			':)': '01',
+			':D': '02',
+			';)': '03',
+			':0': '04',
+			':(': '05',
+			':\\': '06',
+			':|': '07',
+			'0:)': '08',
+			':p': '09',
+			':`0': '10',
+			':8': '11',
+			':[': '12',
+			':S': '13',
+			':E': '14',
+			':b': '15'
+		},
+		emotionsPath: "./img/emotions",
+
+		// Max count of messages in the chat area, extra messages are deleted.
+		maxHistoryMessages: 100
+	};
+
+	// Run application.
+	setTimeout(function() {
+		FC.ChatApp.init(appSettings);
+	}, 100);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding-left:30px; padding-top:10px; padding-bottom:30px;"><h1><a name="1" id="1"></a>
+        Securing Parameters</h1>
+    <p>The &quot;Basic integration&quot; chapter has covered mechanism of data delivery from end 
+        client to authentication handler. All parameters in provided samples traveled 
+        through the system in plain text this way exposing user account information.</p>
+        <p>&nbsp;Before moving to production one should consider building a secured 
+            authentication system based on parameters encryption. There are many different 
+            approaches to build such system and the one you choose will depend on your 
+            website structure and personal preferences. </p>
+        <p>The below diagram demonstrates one of the possible implementations: </p>
+        <p>
+            <img alt="" src="img/messenger7/encrypted_integration.png" /></p>
+        <p>Explanation: </p>
+        <p><b>1</b>. In our example instead of plain UID as 2012 we use encrypted SESSION_ID&nbsp; in 
+            Popup / embedded code (&quot;Adding chat to your website section&quot;) . You may use any data and any 
+            encryption mechanism (MD5, SHA1 etc). </p>
+        <p><b>2</b>. Encrypted UID is passed from chat server to handler. </p>
+        <p><b>3</b>. Handler queries against database to find a match in sessions table 
+            using encrypted UID as a criteria. </p>
+        <p><b>4</b>. The match found is returned to handler. </p>
+        <p><b>5</b>. Handler uses incoming data to generate XML formatted response. If no 
+            match found handler sends authorization failed error. </p>
+        <p><b>6</b>. Full profile is sent to flash client from chat server. </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+    

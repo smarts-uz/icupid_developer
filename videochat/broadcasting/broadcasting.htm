@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Community Chat 7.1 :: Broadcasting</title>
+
+	<script type="text/javascript" src="broadcasting.js"></script>
+	<script type="text/javascript">
+		function z5EnterRoom(roomID)
+		{
+			alert("enter room " + roomID);
+		}
+	</script>
+
+	<style type="text/css">
+		.userVideo
+		{
+			float:left;
+			margin-left:40px;
+		}
+	</style>
+
+</head>
+<body>
+
+<span class="userVideo">
+	<p><strong>David</strong></p>
+	<p>
+	<script type="text/javascript">
+		z5broadcasting.Show('1');
+	</script>
+	</p>
+</span>
+
+<span class="userVideo">
+	<p><strong>Amanda</strong></p>
+	<p>
+	<script type="text/javascript">
+		z5broadcasting.Show('2');
+	</script>
+	</p>
+</span>
+
+<span class="userVideo">
+	<p><strong>Steven</strong></p>
+	<p>
+	<script type="text/javascript">
+		z5broadcasting.Show('3');
+	</script>
+	</p>
+</span>
+
+</body>
+</html>
