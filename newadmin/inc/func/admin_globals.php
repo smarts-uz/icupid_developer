@@ -1,6 +1,6 @@
 <?php
 
-function MakeMenuBar($MenuArray, $type="side",$prefix="", $hidesub=0){
+function  MakeMenuBar($MenuArray, $type="side",$prefix="", $hidesub=0){
 
 	$PageLink="";
 	$pageID="";
@@ -8,10 +8,7 @@ function MakeMenuBar($MenuArray, $type="side",$prefix="", $hidesub=0){
  
 	foreach($MenuArray as $key => $value){ 	
  
-		if(is_array($value)){
-
-			foreach($value as $key1 => $value1){
-
+		if(is_array($value)){      
 				$subKey = substr($key1,-1,1); 
 	
 				if($subKey !="?" && $subKey !="$" && $subKey !="*" && $subKey !="^" && (isset($MenuArray[$key1."_^"])) != "none"){ 
@@ -23,7 +20,7 @@ function MakeMenuBar($MenuArray, $type="side",$prefix="", $hidesub=0){
 							if($hidesub ==0){$String .= '<a href="'.$prefix.$PageLink.'?p='.$key1.'" class="sub"> <img src="inc/images/icons/resultset_next.png" align="absmiddle">'.$value1.'</a>'; }
 						 }else{
 						 	
-							$String .= '<a href="'.$prefix.$PageLink.'?p='.$key1.'" class="pluginsub"> <img src="inc/images/16x16/162.png" align="absmiddle"> '.$value1.'</a>';
+							$String .= '<a href="'.$prefix.$PageLink.'?p='.$key1.'" c sub"> <img src="inc/images/16x16/162.png" align="absmiddle"> '.$value1.'</a>';
 							$icon_pic++;
 						 }
 						
@@ -165,7 +162,7 @@ function Header_LoadOn($page, $subpage){
 	$TableData="";
 //die($page."--".$subpage);
 	if( $subpage =="add" || $subpage =="send" || $subpage =="adminmsg" || $subpage =="compose" || $subpage =="faqadd" || $subpage =="articleadd" || $subpage == "addclass"){
-	
+		
 	 print 'HTMLArea.init();';
 
 	}elseif($page==3 && $subpage==""){
@@ -240,18 +237,17 @@ function untar($file,$to){
 	if (substr($to,-1)!="/") $to.="/";  
 	$o=fopen($file,"rb"); if (!$o) return false;  
 	while(!feof($o)){  
-	$d=unpack("a100fn/a24/a12size",fread($o,512));  
-	//print_r($d);  
-	if (!$d[fn]) break;  
+	$d=unpack("a100fn/a24/a12size",fread($o,512)); 
+	if (!$d) break;
 	$dir="";  
-	$e=explode("/",$d[fn]);  
+	$e=explode("/",$d);  
 	array_pop($e);  
 	foreach($e as $v) {$dir.=$v."/";@mkdir($to.$dir);}  
-	$d[size]=octdec(trim($d[size])); 
-	$o2=fopen($to.$d[fn],"w");  
+	$d=octdec(trim($d)); 
+	$o2=fopen($to.$d,"w");  
 	if(!$o2) return false;  
-	if ($d[size]) fwrite($o2,fread($o,$d[size]));  
-	fclose($o2);  $t=512-($d[size]%512); if ($t&&$t!=512) fread($o,$t); }  
+	if ($d) fwrite($o2,fread($o,$d));  
+	fclose($o2);  $t=512-($d%512); if ($t&&$t!=512) fread($o,$t); }  
 	fclose($o);  
 	return true;  
 }
@@ -2229,7 +2225,8 @@ function getCountryState($country){
 		if(isset($StoreCountry) && is_numeric($StoreCountry)){
 			$ReturnString .= "<div id='Link".$field['fid']."'> <a href='javascript:void(0);' onclick=\"eMeetingLinkedField(".$StoreCountry.", 54,0);\">".MakeCountry($Value[$field['fName']],$field['fid'])." </a> <input type='hidden' class='hidden' name='FieldValue".$field['fid']."' value='".$Value[$field['fName']]."'> </div>";
 
-		}else{
+		}
+		else{
 			$ReturnString .= "<div id='Link".$field['fid']."'>".MakeCountry($Value[$field['fName']],$field['fid'])." </div>";						
 		}
 

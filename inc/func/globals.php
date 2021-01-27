@@ -4232,7 +4232,7 @@ function Build_HeaderScripts($page, $sub, $CUSTOM_PLUGIN_HEADER="",$mobile){
 
 	$myresult = $DB->Row("SELECT id, content FROM template_pages WHERE name='".$page."' LIMIT 1");
 
-	if ($myresult['id'] > 0) {
+	if (isset($myresult['id']) && $myresult['id'] > 0) {
 
 	}elseif(in_array($page,$DontDisplayPageBase)){
 

@@ -222,7 +222,7 @@ function DisplayEmails($system){
 			<td>".$email['status']."</td>
 			<td><a href='?p=add&id=".$email['nid']."'>".icon_edit.$GLOBALS['lang_admin_edit']."</a></td>";
 			// do not delete system newsletters
-
+			
 
 		print "</tr>";
 		$count++;

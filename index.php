@@ -25,6 +25,7 @@
     
 
 require_once("inc/config.php"); 
+error_reporting(E_ALL);
 
 // check secret key
 require_once('inc/func/recaptchalib.php');  
@@ -233,9 +234,8 @@ list( $o1, $o2, $o3, $o4 ) = explode(".",$address);
 $integer_ip = (16777216 * $o1) + (65536 * $o2) + (256 * $o3) + $o4;
 
 $blocked = $DB->Row("SELECT country_name FROM geo_ip_contries WHERE start_ip_num <='".$integer_ip."' AND end_ip_num >='".$integer_ip."' AND is_blocked = 'Y' LIMIT 1");
-
-if($blocked['country_name'] != ''){
-?>	
+if($blocked && $blocked['country_name'] != ''){
+	?>
 	<h1>Access Denied</h1>
 	<h2>this site has been blocked for <?= $blocked['country_name'] ?>.</h2>
 	<p>You IP (<?=$_SERVER['REMOTE_ADDR'] ?>) has been blocked from using this website.</p>
